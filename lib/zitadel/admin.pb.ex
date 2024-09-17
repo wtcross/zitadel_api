@@ -3100,6 +3100,1949 @@ defmodule Zitadel.Admin.V1.TestSMTPConfigResponse do
   end
 end
 
+defmodule Zitadel.Admin.V1.GetEmailProviderRequest do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "GetEmailProviderRequest",
+      field: [],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+end
+
+defmodule Zitadel.Admin.V1.GetEmailProviderResponse do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "GetEmailProviderResponse",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "config",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_MESSAGE,
+          type_name: ".zitadel.settings.v1.EmailProvider",
+          default_value: nil,
+          options: nil,
+          oneof_index: nil,
+          json_name: "config",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:config, 1, type: Zitadel.Settings.V1.EmailProvider)
+end
+
+defmodule Zitadel.Admin.V1.GetEmailProviderByIdRequest do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "GetEmailProviderByIdRequest",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "id",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [{1071, 2, <<114, 4, 16, 1, 24, 100>>}]
+          },
+          oneof_index: nil,
+          json_name: "id",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:id, 1, type: :string, deprecated: false)
+end
+
+defmodule Zitadel.Admin.V1.GetEmailProviderByIdResponse do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "GetEmailProviderByIdResponse",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "config",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_MESSAGE,
+          type_name: ".zitadel.settings.v1.EmailProvider",
+          default_value: nil,
+          options: nil,
+          oneof_index: nil,
+          json_name: "config",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:config, 1, type: Zitadel.Settings.V1.EmailProvider)
+end
+
+defmodule Zitadel.Admin.V1.ListEmailProvidersRequest do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "ListEmailProvidersRequest",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "query",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_MESSAGE,
+          type_name: ".zitadel.v1.ListQuery",
+          default_value: nil,
+          options: nil,
+          oneof_index: nil,
+          json_name: "query",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:query, 1, type: Zitadel.V1.ListQuery)
+end
+
+defmodule Zitadel.Admin.V1.ListEmailProvidersResponse do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "ListEmailProvidersResponse",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "details",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_MESSAGE,
+          type_name: ".zitadel.v1.ListDetails",
+          default_value: nil,
+          options: nil,
+          oneof_index: nil,
+          json_name: "details",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "result",
+          extendee: nil,
+          number: 2,
+          label: :LABEL_REPEATED,
+          type: :TYPE_MESSAGE,
+          type_name: ".zitadel.settings.v1.EmailProvider",
+          default_value: nil,
+          options: nil,
+          oneof_index: nil,
+          json_name: "result",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:details, 1, type: Zitadel.V1.ListDetails)
+  field(:result, 2, repeated: true, type: Zitadel.Settings.V1.EmailProvider)
+end
+
+defmodule Zitadel.Admin.V1.AddEmailProviderSMTPRequest do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "AddEmailProviderSMTPRequest",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "sender_address",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 5, 16, 1, 24, 200, 1>>},
+              {1052, 0, 2},
+              {1042, 2,
+               <<74, 25, 34, 110, 111, 114, 101, 112, 108, 121, 64, 109, 46, 122, 105, 116, 97,
+                 100, 101, 108, 46, 99, 108, 111, 117, 100, 34, 120, 200, 1, 128, 1, 1>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "senderAddress",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "sender_name",
+          extendee: nil,
+          number: 2,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 5, 16, 1, 24, 200, 1>>},
+              {1052, 0, 2},
+              {1042, 2, <<74, 9, 34, 90, 73, 84, 65, 68, 69, 76, 34, 120, 200, 1, 128, 1, 1>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "senderName",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "tls",
+          extendee: nil,
+          number: 3,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_BOOL,
+          type_name: nil,
+          default_value: nil,
+          options: nil,
+          oneof_index: nil,
+          json_name: "tls",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "host",
+          extendee: nil,
+          number: 4,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 5, 16, 1, 24, 244, 3>>},
+              {1052, 0, 2},
+              {1042, 2,
+               <<50, 30, 77, 97, 107, 101, 32, 115, 117, 114, 101, 32, 116, 111, 32, 105, 110, 99,
+                 108, 117, 100, 101, 32, 116, 104, 101, 32, 112, 111, 114, 116, 46, 74, 26, 34,
+                 115, 109, 116, 112, 46, 112, 111, 115, 116, 109, 97, 114, 107, 97, 112, 112, 46,
+                 99, 111, 109, 58, 53, 56, 55, 34, 120, 244, 3, 128, 1, 1>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "host",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "user",
+          extendee: nil,
+          number: 5,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [{1042, 2, "J&\"197f0117-529e-443d-bf6c-0292dd9a02b7\""}]
+          },
+          oneof_index: nil,
+          json_name: "user",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "password",
+          extendee: nil,
+          number: 6,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1042, 2,
+               <<74, 21, 34, 116, 104, 105, 115, 45, 105, 115, 45, 109, 121, 45, 112, 97, 115,
+                 115, 119, 111, 114, 100, 34>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "password",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "reply_to_address",
+          extendee: nil,
+          number: 7,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 5, 16, 0, 24, 200, 1>>},
+              {1042, 2,
+               <<74, 25, 34, 114, 101, 112, 108, 121, 116, 111, 64, 109, 46, 122, 105, 116, 97,
+                 100, 101, 108, 46, 99, 108, 111, 117, 100, 34, 120, 200, 1>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "replyToAddress",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "description",
+          extendee: nil,
+          number: 8,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 5, 16, 0, 24, 200, 1>>},
+              {1042, 2,
+               <<74, 22, 34, 112, 114, 111, 118, 105, 100, 101, 114, 32, 100, 101, 115, 99, 114,
+                 105, 112, 116, 105, 111, 110, 34, 120, 200, 1>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "description",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:sender_address, 1, type: :string, json_name: "senderAddress", deprecated: false)
+  field(:sender_name, 2, type: :string, json_name: "senderName", deprecated: false)
+  field(:tls, 3, type: :bool)
+  field(:host, 4, type: :string, deprecated: false)
+  field(:user, 5, type: :string, deprecated: false)
+  field(:password, 6, type: :string, deprecated: false)
+  field(:reply_to_address, 7, type: :string, json_name: "replyToAddress", deprecated: false)
+  field(:description, 8, type: :string, deprecated: false)
+end
+
+defmodule Zitadel.Admin.V1.AddEmailProviderSMTPResponse do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "AddEmailProviderSMTPResponse",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "details",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_MESSAGE,
+          type_name: ".zitadel.v1.ObjectDetails",
+          default_value: nil,
+          options: nil,
+          oneof_index: nil,
+          json_name: "details",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "id",
+          extendee: nil,
+          number: 2,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: nil,
+          oneof_index: nil,
+          json_name: "id",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:details, 1, type: Zitadel.V1.ObjectDetails)
+  field(:id, 2, type: :string)
+end
+
+defmodule Zitadel.Admin.V1.UpdateEmailProviderSMTPRequest do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "UpdateEmailProviderSMTPRequest",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "sender_address",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 5, 16, 1, 24, 200, 1>>},
+              {1052, 0, 2},
+              {1042, 2,
+               <<74, 25, 34, 110, 111, 114, 101, 112, 108, 121, 64, 109, 46, 122, 105, 116, 97,
+                 100, 101, 108, 46, 99, 108, 111, 117, 100, 34, 120, 200, 1, 128, 1, 1>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "senderAddress",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "sender_name",
+          extendee: nil,
+          number: 2,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 5, 16, 1, 24, 200, 1>>},
+              {1052, 0, 2},
+              {1042, 2, <<74, 9, 34, 90, 73, 84, 65, 68, 69, 76, 34, 120, 200, 1, 128, 1, 1>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "senderName",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "tls",
+          extendee: nil,
+          number: 3,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_BOOL,
+          type_name: nil,
+          default_value: nil,
+          options: nil,
+          oneof_index: nil,
+          json_name: "tls",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "host",
+          extendee: nil,
+          number: 4,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 5, 16, 1, 24, 244, 3>>},
+              {1052, 0, 2},
+              {1042, 2,
+               <<50, 30, 77, 97, 107, 101, 32, 115, 117, 114, 101, 32, 116, 111, 32, 105, 110, 99,
+                 108, 117, 100, 101, 32, 116, 104, 101, 32, 112, 111, 114, 116, 46, 74, 26, 34,
+                 115, 109, 116, 112, 46, 112, 111, 115, 116, 109, 97, 114, 107, 97, 112, 112, 46,
+                 99, 111, 109, 58, 53, 56, 55, 34, 120, 244, 3, 128, 1, 1>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "host",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "user",
+          extendee: nil,
+          number: 5,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [{1042, 2, "J&\"197f0117-529e-443d-bf6c-0292dd9a02b7\""}]
+          },
+          oneof_index: nil,
+          json_name: "user",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "reply_to_address",
+          extendee: nil,
+          number: 6,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 5, 16, 0, 24, 200, 1>>},
+              {1042, 2,
+               <<74, 25, 34, 114, 101, 112, 108, 121, 116, 111, 64, 109, 46, 122, 105, 116, 97,
+                 100, 101, 108, 46, 99, 108, 111, 117, 100, 34, 120, 200, 1>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "replyToAddress",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "password",
+          extendee: nil,
+          number: 7,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1042, 2,
+               <<74, 21, 34, 116, 104, 105, 115, 45, 105, 115, 45, 109, 121, 45, 112, 97, 115,
+                 115, 119, 111, 114, 100, 34>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "password",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "description",
+          extendee: nil,
+          number: 8,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 5, 16, 0, 24, 200, 1>>},
+              {1042, 2,
+               <<74, 22, 34, 112, 114, 111, 118, 105, 100, 101, 114, 32, 100, 101, 115, 99, 114,
+                 105, 112, 116, 105, 111, 110, 34, 120, 200, 1>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "description",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "id",
+          extendee: nil,
+          number: 9,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [{1071, 2, <<114, 4, 16, 1, 24, 100>>}]
+          },
+          oneof_index: nil,
+          json_name: "id",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:sender_address, 1, type: :string, json_name: "senderAddress", deprecated: false)
+  field(:sender_name, 2, type: :string, json_name: "senderName", deprecated: false)
+  field(:tls, 3, type: :bool)
+  field(:host, 4, type: :string, deprecated: false)
+  field(:user, 5, type: :string, deprecated: false)
+  field(:reply_to_address, 6, type: :string, json_name: "replyToAddress", deprecated: false)
+  field(:password, 7, type: :string, deprecated: false)
+  field(:description, 8, type: :string, deprecated: false)
+  field(:id, 9, type: :string, deprecated: false)
+end
+
+defmodule Zitadel.Admin.V1.UpdateEmailProviderSMTPResponse do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "UpdateEmailProviderSMTPResponse",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "details",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_MESSAGE,
+          type_name: ".zitadel.v1.ObjectDetails",
+          default_value: nil,
+          options: nil,
+          oneof_index: nil,
+          json_name: "details",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:details, 1, type: Zitadel.V1.ObjectDetails)
+end
+
+defmodule Zitadel.Admin.V1.UpdateEmailProviderSMTPPasswordRequest do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "UpdateEmailProviderSMTPPasswordRequest",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "password",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1042, 2,
+               <<74, 29, 34, 116, 104, 105, 115, 45, 105, 115, 45, 109, 121, 45, 117, 112, 100,
+                 97, 116, 101, 100, 45, 112, 97, 115, 115, 119, 111, 114, 100, 34>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "password",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "id",
+          extendee: nil,
+          number: 2,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [{1071, 2, <<114, 4, 16, 1, 24, 100>>}]
+          },
+          oneof_index: nil,
+          json_name: "id",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:password, 1, type: :string, deprecated: false)
+  field(:id, 2, type: :string, deprecated: false)
+end
+
+defmodule Zitadel.Admin.V1.UpdateEmailProviderSMTPPasswordResponse do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "UpdateEmailProviderSMTPPasswordResponse",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "details",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_MESSAGE,
+          type_name: ".zitadel.v1.ObjectDetails",
+          default_value: nil,
+          options: nil,
+          oneof_index: nil,
+          json_name: "details",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:details, 1, type: Zitadel.V1.ObjectDetails)
+end
+
+defmodule Zitadel.Admin.V1.AddEmailProviderHTTPRequest do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "AddEmailProviderHTTPRequest",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "endpoint",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 5, 16, 1, 24, 128, 16>>},
+              {1052, 0, 2},
+              {1042, 2,
+               <<74, 35, 34, 104, 116, 116, 112, 58, 47, 47, 114, 101, 108, 97, 121, 46, 101, 120,
+                 97, 109, 112, 108, 101, 46, 99, 111, 109, 47, 112, 114, 111, 118, 105, 100, 101,
+                 114, 34, 120, 128, 16, 128, 1, 1>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "endpoint",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "description",
+          extendee: nil,
+          number: 2,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 5, 16, 0, 24, 200, 1>>},
+              {1042, 2,
+               <<74, 22, 34, 112, 114, 111, 118, 105, 100, 101, 114, 32, 100, 101, 115, 99, 114,
+                 105, 112, 116, 105, 111, 110, 34, 120, 200, 1>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "description",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:endpoint, 1, type: :string, deprecated: false)
+  field(:description, 2, type: :string, deprecated: false)
+end
+
+defmodule Zitadel.Admin.V1.AddEmailProviderHTTPResponse do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "AddEmailProviderHTTPResponse",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "details",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_MESSAGE,
+          type_name: ".zitadel.v1.ObjectDetails",
+          default_value: nil,
+          options: nil,
+          oneof_index: nil,
+          json_name: "details",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "id",
+          extendee: nil,
+          number: 2,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: nil,
+          oneof_index: nil,
+          json_name: "id",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:details, 1, type: Zitadel.V1.ObjectDetails)
+  field(:id, 2, type: :string)
+end
+
+defmodule Zitadel.Admin.V1.UpdateEmailProviderHTTPRequest do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "UpdateEmailProviderHTTPRequest",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "id",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [{1071, 2, <<114, 4, 16, 1, 24, 100>>}]
+          },
+          oneof_index: nil,
+          json_name: "id",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "endpoint",
+          extendee: nil,
+          number: 2,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 5, 16, 1, 24, 128, 16>>},
+              {1052, 0, 2},
+              {1042, 2,
+               <<74, 35, 34, 104, 116, 116, 112, 58, 47, 47, 114, 101, 108, 97, 121, 46, 101, 120,
+                 97, 109, 112, 108, 101, 46, 99, 111, 109, 47, 112, 114, 111, 118, 105, 100, 101,
+                 114, 34, 120, 128, 16, 128, 1, 1>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "endpoint",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "description",
+          extendee: nil,
+          number: 3,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 5, 16, 0, 24, 200, 1>>},
+              {1042, 2,
+               <<74, 22, 34, 112, 114, 111, 118, 105, 100, 101, 114, 32, 100, 101, 115, 99, 114,
+                 105, 112, 116, 105, 111, 110, 34, 120, 200, 1>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "description",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:id, 1, type: :string, deprecated: false)
+  field(:endpoint, 2, type: :string, deprecated: false)
+  field(:description, 3, type: :string, deprecated: false)
+end
+
+defmodule Zitadel.Admin.V1.UpdateEmailProviderHTTPResponse do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "UpdateEmailProviderHTTPResponse",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "details",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_MESSAGE,
+          type_name: ".zitadel.v1.ObjectDetails",
+          default_value: nil,
+          options: nil,
+          oneof_index: nil,
+          json_name: "details",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:details, 1, type: Zitadel.V1.ObjectDetails)
+end
+
+defmodule Zitadel.Admin.V1.ActivateEmailProviderRequest do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "ActivateEmailProviderRequest",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "id",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [{1071, 2, <<114, 5, 16, 1, 24, 200, 1>>}]
+          },
+          oneof_index: nil,
+          json_name: "id",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:id, 1, type: :string, deprecated: false)
+end
+
+defmodule Zitadel.Admin.V1.ActivateEmailProviderResponse do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "ActivateEmailProviderResponse",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "details",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_MESSAGE,
+          type_name: ".zitadel.v1.ObjectDetails",
+          default_value: nil,
+          options: nil,
+          oneof_index: nil,
+          json_name: "details",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:details, 1, type: Zitadel.V1.ObjectDetails)
+end
+
+defmodule Zitadel.Admin.V1.DeactivateEmailProviderRequest do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "DeactivateEmailProviderRequest",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "id",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [{1071, 2, <<114, 5, 16, 1, 24, 200, 1>>}]
+          },
+          oneof_index: nil,
+          json_name: "id",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:id, 1, type: :string, deprecated: false)
+end
+
+defmodule Zitadel.Admin.V1.DeactivateEmailProviderResponse do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "DeactivateEmailProviderResponse",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "details",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_MESSAGE,
+          type_name: ".zitadel.v1.ObjectDetails",
+          default_value: nil,
+          options: nil,
+          oneof_index: nil,
+          json_name: "details",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:details, 1, type: Zitadel.V1.ObjectDetails)
+end
+
+defmodule Zitadel.Admin.V1.RemoveEmailProviderRequest do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "RemoveEmailProviderRequest",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "id",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [{1071, 2, <<114, 4, 16, 1, 24, 100>>}]
+          },
+          oneof_index: nil,
+          json_name: "id",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:id, 1, type: :string, deprecated: false)
+end
+
+defmodule Zitadel.Admin.V1.RemoveEmailProviderResponse do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "RemoveEmailProviderResponse",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "details",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_MESSAGE,
+          type_name: ".zitadel.v1.ObjectDetails",
+          default_value: nil,
+          options: nil,
+          oneof_index: nil,
+          json_name: "details",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:details, 1, type: Zitadel.V1.ObjectDetails)
+end
+
+defmodule Zitadel.Admin.V1.TestEmailProviderSMTPByIdRequest do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "TestEmailProviderSMTPByIdRequest",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "id",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [{1071, 2, <<114, 4, 16, 1, 24, 100>>}]
+          },
+          oneof_index: nil,
+          json_name: "id",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "receiver_address",
+          extendee: nil,
+          number: 2,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 7, 16, 1, 24, 200, 1, 96, 1>>},
+              {1052, 0, 2},
+              {1042, 2,
+               <<74, 25, 34, 110, 111, 114, 101, 112, 108, 121, 64, 109, 46, 122, 105, 116, 97,
+                 100, 101, 108, 46, 99, 108, 111, 117, 100, 34, 120, 200, 1, 128, 1, 1>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "receiverAddress",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:id, 1, type: :string, deprecated: false)
+  field(:receiver_address, 2, type: :string, json_name: "receiverAddress", deprecated: false)
+end
+
+defmodule Zitadel.Admin.V1.TestEmailProviderSMTPByIdResponse do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "TestEmailProviderSMTPByIdResponse",
+      field: [],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+end
+
+defmodule Zitadel.Admin.V1.TestEmailProviderSMTPRequest do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "TestEmailProviderSMTPRequest",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "sender_address",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 5, 16, 1, 24, 200, 1>>},
+              {1052, 0, 2},
+              {1042, 2,
+               <<74, 25, 34, 110, 111, 114, 101, 112, 108, 121, 64, 109, 46, 122, 105, 116, 97,
+                 100, 101, 108, 46, 99, 108, 111, 117, 100, 34, 120, 200, 1, 128, 1, 1>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "senderAddress",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "sender_name",
+          extendee: nil,
+          number: 2,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 5, 16, 1, 24, 200, 1>>},
+              {1052, 0, 2},
+              {1042, 2, <<74, 9, 34, 90, 73, 84, 65, 68, 69, 76, 34, 120, 200, 1, 128, 1, 1>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "senderName",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "tls",
+          extendee: nil,
+          number: 3,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_BOOL,
+          type_name: nil,
+          default_value: nil,
+          options: nil,
+          oneof_index: nil,
+          json_name: "tls",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "host",
+          extendee: nil,
+          number: 4,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 5, 16, 1, 24, 244, 3>>},
+              {1052, 0, 2},
+              {1042, 2,
+               <<50, 30, 77, 97, 107, 101, 32, 115, 117, 114, 101, 32, 116, 111, 32, 105, 110, 99,
+                 108, 117, 100, 101, 32, 116, 104, 101, 32, 112, 111, 114, 116, 46, 74, 26, 34,
+                 115, 109, 116, 112, 46, 112, 111, 115, 116, 109, 97, 114, 107, 97, 112, 112, 46,
+                 99, 111, 109, 58, 53, 56, 55, 34, 120, 244, 3, 128, 1, 1>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "host",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "user",
+          extendee: nil,
+          number: 5,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [{1042, 2, "J&\"197f0117-529e-443d-bf6c-0292dd9a02b7\""}]
+          },
+          oneof_index: nil,
+          json_name: "user",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "password",
+          extendee: nil,
+          number: 6,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1042, 2,
+               <<74, 21, 34, 116, 104, 105, 115, 45, 105, 115, 45, 109, 121, 45, 112, 97, 115,
+                 115, 119, 111, 114, 100, 34>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "password",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "receiver_address",
+          extendee: nil,
+          number: 7,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 7, 16, 1, 24, 200, 1, 96, 1>>},
+              {1052, 0, 2},
+              {1042, 2,
+               <<74, 25, 34, 110, 111, 114, 101, 112, 108, 121, 64, 109, 46, 122, 105, 116, 97,
+                 100, 101, 108, 46, 99, 108, 111, 117, 100, 34, 120, 200, 1, 128, 1, 1>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "receiverAddress",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "id",
+          extendee: nil,
+          number: 8,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1042, 2,
+               <<50, 103, 90, 105, 116, 97, 100, 101, 108, 32, 83, 77, 84, 80, 32, 112, 114, 111,
+                 118, 105, 100, 101, 114, 32, 105, 100, 32, 105, 110, 32, 99, 97, 115, 101, 32,
+                 121, 111, 117, 32, 97, 114, 101, 32, 110, 111, 116, 32, 115, 101, 110, 100, 105,
+                 110, 103, 32, 116, 104, 101, 32, 112, 97, 115, 115, 119, 111, 114, 100, 32, 97,
+                 110, 100, 32, 119, 97, 110, 116, 32, 116, 111, 32, 114, 101, 117, 115, 101, 32,
+                 116, 104, 101, 32, 115, 116, 111, 114, 101, 100, 32, 112, 97, 115, 115, 119, 111,
+                 114, 100, 74, 20, 34, 50, 54, 55, 49, 57, 49, 51, 54, 57, 53, 49, 53, 49, 51, 57,
+                 52, 54, 52, 34>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "id",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:sender_address, 1, type: :string, json_name: "senderAddress", deprecated: false)
+  field(:sender_name, 2, type: :string, json_name: "senderName", deprecated: false)
+  field(:tls, 3, type: :bool)
+  field(:host, 4, type: :string, deprecated: false)
+  field(:user, 5, type: :string, deprecated: false)
+  field(:password, 6, type: :string, deprecated: false)
+  field(:receiver_address, 7, type: :string, json_name: "receiverAddress", deprecated: false)
+  field(:id, 8, type: :string, deprecated: false)
+end
+
+defmodule Zitadel.Admin.V1.TestEmailProviderSMTPResponse do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "TestEmailProviderSMTPResponse",
+      field: [],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+end
+
 defmodule Zitadel.Admin.V1.ListSMSProvidersRequest do
   use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
 
@@ -3382,6 +5325,37 @@ defmodule Zitadel.Admin.V1.AddSMSProviderTwilioRequest do
           json_name: "senderNumber",
           proto3_optional: nil,
           __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "description",
+          extendee: nil,
+          number: 4,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 5, 16, 0, 24, 200, 1>>},
+              {1042, 2,
+               <<74, 22, 34, 112, 114, 111, 118, 105, 100, 101, 114, 32, 100, 101, 115, 99, 114,
+                 105, 112, 116, 105, 111, 110, 34, 120, 200, 1>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "description",
+          proto3_optional: nil,
+          __unknown_fields__: []
         }
       ],
       nested_type: [],
@@ -3399,6 +5373,7 @@ defmodule Zitadel.Admin.V1.AddSMSProviderTwilioRequest do
   field(:sid, 1, type: :string, deprecated: false)
   field(:token, 2, type: :string, deprecated: false)
   field(:sender_number, 3, type: :string, json_name: "senderNumber", deprecated: false)
+  field(:description, 4, type: :string, deprecated: false)
 end
 
 defmodule Zitadel.Admin.V1.AddSMSProviderTwilioResponse do
@@ -3553,6 +5528,37 @@ defmodule Zitadel.Admin.V1.UpdateSMSProviderTwilioRequest do
           json_name: "senderNumber",
           proto3_optional: nil,
           __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "description",
+          extendee: nil,
+          number: 4,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 5, 16, 0, 24, 200, 1>>},
+              {1042, 2,
+               <<74, 22, 34, 112, 114, 111, 118, 105, 100, 101, 114, 32, 100, 101, 115, 99, 114,
+                 105, 112, 116, 105, 111, 110, 34, 120, 200, 1>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "description",
+          proto3_optional: nil,
+          __unknown_fields__: []
         }
       ],
       nested_type: [],
@@ -3570,6 +5576,7 @@ defmodule Zitadel.Admin.V1.UpdateSMSProviderTwilioRequest do
   field(:id, 1, type: :string, deprecated: false)
   field(:sid, 2, type: :string, deprecated: false)
   field(:sender_number, 3, type: :string, json_name: "senderNumber", deprecated: false)
+  field(:description, 4, type: :string, deprecated: false)
 end
 
 defmodule Zitadel.Admin.V1.UpdateSMSProviderTwilioResponse do
@@ -3694,6 +5701,302 @@ defmodule Zitadel.Admin.V1.UpdateSMSProviderTwilioTokenResponse do
     # credo:disable-for-next-line
     %Google.Protobuf.DescriptorProto{
       name: "UpdateSMSProviderTwilioTokenResponse",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "details",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_MESSAGE,
+          type_name: ".zitadel.v1.ObjectDetails",
+          default_value: nil,
+          options: nil,
+          oneof_index: nil,
+          json_name: "details",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:details, 1, type: Zitadel.V1.ObjectDetails)
+end
+
+defmodule Zitadel.Admin.V1.AddSMSProviderHTTPRequest do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "AddSMSProviderHTTPRequest",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "endpoint",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 5, 16, 1, 24, 128, 16>>},
+              {1052, 0, 2},
+              {1042, 2,
+               <<74, 35, 34, 104, 116, 116, 112, 58, 47, 47, 114, 101, 108, 97, 121, 46, 101, 120,
+                 97, 109, 112, 108, 101, 46, 99, 111, 109, 47, 112, 114, 111, 118, 105, 100, 101,
+                 114, 34, 120, 128, 16, 128, 1, 1>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "endpoint",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "description",
+          extendee: nil,
+          number: 2,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 5, 16, 0, 24, 200, 1>>},
+              {1042, 2,
+               <<74, 22, 34, 112, 114, 111, 118, 105, 100, 101, 114, 32, 100, 101, 115, 99, 114,
+                 105, 112, 116, 105, 111, 110, 34, 120, 200, 1>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "description",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:endpoint, 1, type: :string, deprecated: false)
+  field(:description, 2, type: :string, deprecated: false)
+end
+
+defmodule Zitadel.Admin.V1.AddSMSProviderHTTPResponse do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "AddSMSProviderHTTPResponse",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "details",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_MESSAGE,
+          type_name: ".zitadel.v1.ObjectDetails",
+          default_value: nil,
+          options: nil,
+          oneof_index: nil,
+          json_name: "details",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "id",
+          extendee: nil,
+          number: 2,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: nil,
+          oneof_index: nil,
+          json_name: "id",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:details, 1, type: Zitadel.V1.ObjectDetails)
+  field(:id, 2, type: :string)
+end
+
+defmodule Zitadel.Admin.V1.UpdateSMSProviderHTTPRequest do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "UpdateSMSProviderHTTPRequest",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "id",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [{1071, 2, <<114, 5, 16, 1, 24, 200, 1>>}]
+          },
+          oneof_index: nil,
+          json_name: "id",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "endpoint",
+          extendee: nil,
+          number: 2,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 5, 16, 1, 24, 128, 16>>},
+              {1052, 0, 2},
+              {1042, 2,
+               <<74, 35, 34, 104, 116, 116, 112, 58, 47, 47, 114, 101, 108, 97, 121, 46, 101, 120,
+                 97, 109, 112, 108, 101, 46, 99, 111, 109, 47, 112, 114, 111, 118, 105, 100, 101,
+                 114, 34, 120, 128, 16, 128, 1, 1>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "endpoint",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "description",
+          extendee: nil,
+          number: 3,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 5, 16, 0, 24, 200, 1>>},
+              {1042, 2,
+               <<74, 22, 34, 112, 114, 111, 118, 105, 100, 101, 114, 32, 100, 101, 115, 99, 114,
+                 105, 112, 116, 105, 111, 110, 34, 120, 200, 1>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "description",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:id, 1, type: :string, deprecated: false)
+  field(:endpoint, 2, type: :string, deprecated: false)
+  field(:description, 3, type: :string, deprecated: false)
+end
+
+defmodule Zitadel.Admin.V1.UpdateSMSProviderHTTPResponse do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "UpdateSMSProviderHTTPResponse",
       field: [
         %Google.Protobuf.FieldDescriptorProto{
           name: "details",
@@ -25693,6 +27996,592 @@ defmodule Zitadel.Admin.V1.ResetCustomPasswordChangeMessageTextToDefaultResponse
   field(:details, 1, type: Zitadel.V1.ObjectDetails)
 end
 
+defmodule Zitadel.Admin.V1.GetDefaultInviteUserMessageTextRequest do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "GetDefaultInviteUserMessageTextRequest",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "language",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [{1071, 2, <<114, 5, 16, 1, 24, 200, 1>>}]
+          },
+          oneof_index: nil,
+          json_name: "language",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:language, 1, type: :string, deprecated: false)
+end
+
+defmodule Zitadel.Admin.V1.GetDefaultInviteUserMessageTextResponse do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "GetDefaultInviteUserMessageTextResponse",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "custom_text",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_MESSAGE,
+          type_name: ".zitadel.text.v1.MessageCustomText",
+          default_value: nil,
+          options: nil,
+          oneof_index: nil,
+          json_name: "customText",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:custom_text, 1, type: Zitadel.Text.V1.MessageCustomText, json_name: "customText")
+end
+
+defmodule Zitadel.Admin.V1.GetCustomInviteUserMessageTextRequest do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "GetCustomInviteUserMessageTextRequest",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "language",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [{1071, 2, <<114, 5, 16, 1, 24, 200, 1>>}]
+          },
+          oneof_index: nil,
+          json_name: "language",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:language, 1, type: :string, deprecated: false)
+end
+
+defmodule Zitadel.Admin.V1.GetCustomInviteUserMessageTextResponse do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "GetCustomInviteUserMessageTextResponse",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "custom_text",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_MESSAGE,
+          type_name: ".zitadel.text.v1.MessageCustomText",
+          default_value: nil,
+          options: nil,
+          oneof_index: nil,
+          json_name: "customText",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:custom_text, 1, type: Zitadel.Text.V1.MessageCustomText, json_name: "customText")
+end
+
+defmodule Zitadel.Admin.V1.SetDefaultInviteUserMessageTextRequest do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "SetDefaultInviteUserMessageTextRequest",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "language",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 5, 16, 1, 24, 200, 1>>},
+              {1052, 0, 2},
+              {1042, 2, <<74, 4, 34, 100, 101, 34, 120, 200, 1, 128, 1, 1>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "language",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "title",
+          extendee: nil,
+          number: 2,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 3, 40, 208, 15>>},
+              {1042, 2,
+               <<74, 36, 34, 73, 110, 118, 105, 116, 97, 116, 105, 111, 110, 32, 116, 111, 32,
+                 123, 123, 46, 65, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 78, 97, 109,
+                 101, 125, 125, 34, 120, 244, 3>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "title",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "pre_header",
+          extendee: nil,
+          number: 3,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 3, 40, 208, 15>>},
+              {1042, 2,
+               <<74, 36, 34, 73, 110, 118, 105, 116, 97, 116, 105, 111, 110, 32, 116, 111, 32,
+                 123, 123, 46, 65, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 78, 97, 109,
+                 101, 125, 125, 34, 120, 244, 3>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "preHeader",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "subject",
+          extendee: nil,
+          number: 4,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 3, 40, 208, 15>>},
+              {1042, 2,
+               <<74, 36, 34, 73, 110, 118, 105, 116, 97, 116, 105, 111, 110, 32, 116, 111, 32,
+                 123, 123, 46, 65, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 78, 97, 109,
+                 101, 125, 125, 34, 120, 244, 3>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "subject",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "greeting",
+          extendee: nil,
+          number: 5,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 3, 40, 160, 31>>},
+              {1042, 2,
+               <<74, 25, 34, 72, 101, 108, 108, 111, 32, 123, 123, 46, 68, 105, 115, 112, 108, 97,
+                 121, 78, 97, 109, 101, 125, 125, 44, 34, 120, 232, 7>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "greeting",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "text",
+          extendee: nil,
+          number: 6,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 4, 40, 192, 184, 2>>},
+              {1042, 2,
+               <<74, 164, 1, 34, 89, 111, 117, 114, 32, 117, 115, 101, 114, 32, 104, 97, 115, 32,
+                 98, 101, 101, 110, 32, 105, 110, 118, 105, 116, 101, 100, 32, 116, 111, 32, 123,
+                 123, 46, 65, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 78, 97, 109, 101,
+                 125, 125, 46, 32, 80, 108, 101, 97, 115, 101, 32, 99, 108, 105, 99, 107, 32, 116,
+                 104, 101, 32, 98, 117, 116, 116, 111, 110, 32, 98, 101, 108, 111, 119, 32, 116,
+                 111, 32, 102, 105, 110, 105, 115, 104, 32, 116, 104, 101, 32, 105, 110, 118, 105,
+                 116, 101, 32, 112, 114, 111, 99, 101, 115, 115, 46, 32, 73, 102, 32, 121, 111,
+                 117, 32, 100, 105, 100, 110, 39, 116, 32, 97, 115, 107, 32, 102, 111, 114, 32,
+                 116, 104, 105, 115, 32, 109, 97, 105, 108, 44, 32, 112, 108, 101, 97, 115, 101,
+                 32, 105, 103, 110, 111, 114, 101, 32, 105, 116, 46, 34, 120, 144, 78>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "text",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "button_text",
+          extendee: nil,
+          number: 7,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 3, 40, 160, 31>>},
+              {1042, 2,
+               <<74, 15, 34, 65, 99, 99, 101, 112, 116, 32, 105, 110, 118, 105, 116, 101, 34, 120,
+                 232, 7>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "buttonText",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "footer_text",
+          extendee: nil,
+          number: 8,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [{1071, 2, <<114, 3, 24, 192, 62>>}]
+          },
+          oneof_index: nil,
+          json_name: "footerText",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:language, 1, type: :string, deprecated: false)
+  field(:title, 2, type: :string, deprecated: false)
+  field(:pre_header, 3, type: :string, json_name: "preHeader", deprecated: false)
+  field(:subject, 4, type: :string, deprecated: false)
+  field(:greeting, 5, type: :string, deprecated: false)
+  field(:text, 6, type: :string, deprecated: false)
+  field(:button_text, 7, type: :string, json_name: "buttonText", deprecated: false)
+  field(:footer_text, 8, type: :string, json_name: "footerText", deprecated: false)
+end
+
+defmodule Zitadel.Admin.V1.SetDefaultInviteUserMessageTextResponse do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "SetDefaultInviteUserMessageTextResponse",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "details",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_MESSAGE,
+          type_name: ".zitadel.v1.ObjectDetails",
+          default_value: nil,
+          options: nil,
+          oneof_index: nil,
+          json_name: "details",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:details, 1, type: Zitadel.V1.ObjectDetails)
+end
+
+defmodule Zitadel.Admin.V1.ResetCustomInviteUserMessageTextToDefaultRequest do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "ResetCustomInviteUserMessageTextToDefaultRequest",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "language",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [{1071, 2, <<114, 5, 16, 1, 24, 200, 1>>}]
+          },
+          oneof_index: nil,
+          json_name: "language",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:language, 1, type: :string, deprecated: false)
+end
+
+defmodule Zitadel.Admin.V1.ResetCustomInviteUserMessageTextToDefaultResponse do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "ResetCustomInviteUserMessageTextToDefaultResponse",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "details",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_MESSAGE,
+          type_name: ".zitadel.v1.ObjectDetails",
+          default_value: nil,
+          options: nil,
+          oneof_index: nil,
+          json_name: "details",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:details, 1, type: Zitadel.V1.ObjectDetails)
+end
+
 defmodule Zitadel.Admin.V1.GetDefaultPasswordlessRegistrationMessageTextRequest do
   use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
 
@@ -29642,6 +32531,20 @@ defmodule Zitadel.Admin.V1.DataOrg do
           json_name: "verifyEmailOtpMessages",
           proto3_optional: nil,
           __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "invite_user_messages",
+          extendee: nil,
+          number: 39,
+          label: :LABEL_REPEATED,
+          type: :TYPE_MESSAGE,
+          type_name: ".zitadel.management.v1.SetCustomInviteUserMessageTextRequest",
+          default_value: nil,
+          options: nil,
+          oneof_index: nil,
+          json_name: "inviteUserMessages",
+          proto3_optional: nil,
+          __unknown_fields__: []
         }
       ],
       nested_type: [],
@@ -29829,6 +32732,12 @@ defmodule Zitadel.Admin.V1.DataOrg do
     repeated: true,
     type: Zitadel.Management.V1.SetCustomVerifyEmailOTPMessageTextRequest,
     json_name: "verifyEmailOtpMessages"
+  )
+
+  field(:invite_user_messages, 39,
+    repeated: true,
+    type: Zitadel.Management.V1.SetCustomInviteUserMessageTextRequest,
+    json_name: "inviteUserMessages"
   )
 end
 
@@ -33363,7 +36272,7 @@ defmodule Zitadel.Admin.V1.AdminService.Service do
             __unknown_fields__: [
               {72_295_728, 2,
                <<34, 16, 47, 116, 114, 117, 115, 116, 101, 100, 95, 100, 111, 109, 97, 105, 110,
-                 115>>},
+                 115, 58, 1, 42>>},
               {50000, 2, "\n\tiam.write"},
               {1042, 2,
                <<10, 8, 73, 110, 115, 116, 97, 110, 99, 101, 18, 30, 65, 100, 100, 32, 97, 110,
@@ -33526,15 +36435,7 @@ defmodule Zitadel.Admin.V1.AdminService.Service do
             __unknown_fields__: [
               {72_295_728, 2, <<18, 5, 47, 115, 109, 116, 112>>},
               {50000, 2, "\n\biam.read"},
-              {1042, 2,
-               <<10, 4, 83, 77, 84, 80, 18, 29, 71, 101, 116, 32, 97, 99, 116, 105, 118, 101, 32,
-                 83, 77, 84, 80, 32, 67, 111, 110, 102, 105, 103, 117, 114, 97, 116, 105, 111,
-                 110, 26, 97, 82, 101, 116, 117, 114, 110, 115, 32, 116, 104, 101, 32, 97, 99,
-                 116, 105, 118, 101, 32, 83, 77, 84, 80, 32, 99, 111, 110, 102, 105, 103, 117,
-                 114, 97, 116, 105, 111, 110, 32, 102, 114, 111, 109, 32, 116, 104, 101, 32, 115,
-                 121, 115, 116, 101, 109, 46, 32, 84, 104, 105, 115, 32, 105, 115, 32, 117, 115,
-                 101, 100, 32, 116, 111, 32, 115, 101, 110, 100, 32, 69, 45, 77, 97, 105, 108,
-                 115, 32, 116, 111, 32, 116, 104, 101, 32, 117, 115, 101, 114, 115, 46>>}
+              {1042, 2, <<10, 12, 83, 77, 84, 80, 32, 67, 111, 110, 102, 105, 103, 115, 88, 1>>}
             ]
           },
           client_streaming: false,
@@ -33553,13 +36454,7 @@ defmodule Zitadel.Admin.V1.AdminService.Service do
             __unknown_fields__: [
               {72_295_728, 2, <<18, 10, 47, 115, 109, 116, 112, 47, 123, 105, 100, 125>>},
               {50000, 2, "\n\biam.read"},
-              {1042, 2,
-               <<10, 4, 83, 77, 84, 80, 18, 41, 71, 101, 116, 32, 83, 77, 84, 80, 32, 112, 114,
-                 111, 118, 105, 100, 101, 114, 32, 99, 111, 110, 102, 105, 103, 117, 114, 97, 116,
-                 105, 111, 110, 32, 98, 121, 32, 105, 116, 115, 32, 105, 100, 26, 53, 71, 101,
-                 116, 32, 97, 32, 115, 112, 101, 99, 105, 102, 105, 99, 32, 83, 77, 84, 80, 32,
-                 112, 114, 111, 118, 105, 100, 101, 114, 32, 99, 111, 110, 102, 105, 103, 117,
-                 114, 97, 116, 105, 111, 110, 32, 98, 121, 32, 105, 116, 115, 32, 73, 68, 46>>}
+              {1042, 2, <<10, 12, 83, 77, 84, 80, 32, 67, 111, 110, 102, 105, 103, 115, 88, 1>>}
             ]
           },
           client_streaming: false,
@@ -33578,12 +36473,7 @@ defmodule Zitadel.Admin.V1.AdminService.Service do
             __unknown_fields__: [
               {72_295_728, 2, <<34, 5, 47, 115, 109, 116, 112, 58, 1, 42>>},
               {50000, 2, "\n\tiam.write"},
-              {1042, 2,
-               <<10, 4, 83, 77, 84, 80, 18, 22, 65, 100, 100, 32, 83, 77, 84, 80, 32, 67, 111,
-                 110, 102, 105, 103, 117, 114, 97, 116, 105, 111, 110, 26, 51, 65, 100, 100, 32,
-                 97, 32, 110, 101, 119, 32, 83, 77, 84, 80, 32, 99, 111, 110, 102, 105, 103, 117,
-                 114, 97, 116, 105, 111, 110, 32, 105, 102, 32, 110, 111, 116, 104, 105, 110, 103,
-                 32, 105, 115, 32, 115, 101, 116, 32, 121, 101, 116, 46>>}
+              {1042, 2, <<10, 12, 83, 77, 84, 80, 32, 67, 111, 110, 102, 105, 103, 115, 88, 1>>}
             ]
           },
           client_streaming: false,
@@ -33603,19 +36493,7 @@ defmodule Zitadel.Admin.V1.AdminService.Service do
               {72_295_728, 2,
                <<26, 10, 47, 115, 109, 116, 112, 47, 123, 105, 100, 125, 58, 1, 42>>},
               {50000, 2, "\n\tiam.write"},
-              {1042, 2,
-               <<10, 4, 83, 77, 84, 80, 18, 25, 85, 112, 100, 97, 116, 101, 32, 83, 77, 84, 80,
-                 32, 67, 111, 110, 102, 105, 103, 117, 114, 97, 116, 105, 111, 110, 26, 159, 1,
-                 85, 112, 100, 97, 116, 101, 32, 116, 104, 101, 32, 83, 77, 84, 80, 32, 99, 111,
-                 110, 102, 105, 103, 117, 114, 97, 116, 105, 111, 110, 44, 32, 98, 101, 32, 97,
-                 119, 97, 114, 101, 32, 116, 104, 97, 116, 32, 116, 104, 105, 115, 32, 119, 105,
-                 108, 108, 32, 98, 101, 32, 97, 99, 116, 105, 118, 97, 116, 101, 100, 32, 97, 115,
-                 32, 115, 111, 111, 110, 32, 97, 115, 32, 105, 116, 32, 105, 115, 32, 115, 97,
-                 118, 101, 100, 46, 32, 83, 111, 32, 116, 104, 101, 32, 117, 115, 101, 114, 115,
-                 32, 119, 105, 108, 108, 32, 103, 101, 116, 32, 110, 111, 116, 105, 102, 105, 99,
-                 97, 116, 105, 111, 110, 115, 32, 102, 114, 111, 109, 32, 116, 104, 101, 32, 110,
-                 101, 119, 108, 121, 32, 99, 111, 110, 102, 105, 103, 117, 114, 101, 100, 32, 83,
-                 77, 84, 80, 46>>}
+              {1042, 2, <<10, 12, 83, 77, 84, 80, 32, 67, 111, 110, 102, 105, 103, 115, 88, 1>>}
             ]
           },
           client_streaming: false,
@@ -33636,20 +36514,7 @@ defmodule Zitadel.Admin.V1.AdminService.Service do
                <<26, 19, 47, 115, 109, 116, 112, 47, 123, 105, 100, 125, 47, 112, 97, 115, 115,
                  119, 111, 114, 100, 58, 1, 42>>},
               {50000, 2, "\n\tiam.write"},
-              {1042, 2,
-               <<10, 4, 83, 77, 84, 80, 18, 20, 85, 112, 100, 97, 116, 101, 32, 83, 77, 84, 80,
-                 32, 80, 97, 115, 115, 119, 111, 114, 100, 26, 180, 1, 85, 112, 100, 97, 116, 101,
-                 32, 116, 104, 101, 32, 83, 77, 84, 80, 32, 112, 97, 115, 115, 119, 111, 114, 100,
-                 32, 116, 104, 97, 116, 32, 105, 115, 32, 117, 115, 101, 100, 32, 102, 111, 114,
-                 32, 116, 104, 101, 32, 104, 111, 115, 116, 44, 32, 98, 101, 32, 97, 119, 97, 114,
-                 101, 32, 116, 104, 97, 116, 32, 116, 104, 105, 115, 32, 119, 105, 108, 108, 32,
-                 98, 101, 32, 97, 99, 116, 105, 118, 97, 116, 101, 100, 32, 97, 115, 32, 115, 111,
-                 111, 110, 32, 97, 115, 32, 105, 116, 32, 105, 115, 32, 115, 97, 118, 101, 100,
-                 46, 32, 83, 111, 32, 116, 104, 101, 32, 117, 115, 101, 114, 115, 32, 119, 105,
-                 108, 108, 32, 103, 101, 116, 32, 110, 111, 116, 105, 102, 105, 99, 97, 116, 105,
-                 111, 110, 115, 32, 102, 114, 111, 109, 32, 116, 104, 101, 32, 110, 101, 119, 108,
-                 121, 32, 99, 111, 110, 102, 105, 103, 117, 114, 101, 100, 32, 83, 77, 84, 80,
-                 46>>}
+              {1042, 2, <<10, 12, 83, 77, 84, 80, 32, 67, 111, 110, 102, 105, 103, 115, 88, 1>>}
             ]
           },
           client_streaming: false,
@@ -33671,10 +36536,10 @@ defmodule Zitadel.Admin.V1.AdminService.Service do
                  118, 97, 116, 101, 58, 1, 42>>},
               {50000, 2, "\n\tiam.write"},
               {1042, 2,
-               <<10, 13, 83, 77, 84, 80, 32, 80, 114, 111, 118, 105, 100, 101, 114, 18, 22, 65,
-                 99, 116, 105, 118, 97, 116, 101, 32, 83, 77, 84, 80, 32, 80, 114, 111, 118, 105,
-                 100, 101, 114, 26, 26, 65, 99, 116, 105, 118, 97, 116, 101, 32, 97, 110, 32, 83,
-                 77, 84, 80, 32, 112, 114, 111, 118, 105, 100, 101, 114, 46>>}
+               <<10, 12, 83, 77, 84, 80, 32, 67, 111, 110, 102, 105, 103, 115, 18, 22, 65, 99,
+                 116, 105, 118, 97, 116, 101, 32, 83, 77, 84, 80, 32, 80, 114, 111, 118, 105, 100,
+                 101, 114, 26, 26, 65, 99, 116, 105, 118, 97, 116, 101, 32, 97, 110, 32, 83, 77,
+                 84, 80, 32, 112, 114, 111, 118, 105, 100, 101, 114, 46, 88, 1>>}
             ]
           },
           client_streaming: false,
@@ -33695,18 +36560,7 @@ defmodule Zitadel.Admin.V1.AdminService.Service do
                <<34, 22, 47, 115, 109, 116, 112, 47, 123, 105, 100, 125, 47, 95, 100, 101, 97, 99,
                  116, 105, 118, 97, 116, 101, 58, 1, 42>>},
               {50000, 2, "\n\tiam.write"},
-              {1042, 2,
-               <<10, 13, 83, 77, 84, 80, 32, 80, 114, 111, 118, 105, 100, 101, 114, 18, 24, 68,
-                 101, 97, 99, 116, 105, 118, 97, 116, 101, 32, 83, 77, 84, 80, 32, 80, 114, 111,
-                 118, 105, 100, 101, 114, 26, 146, 1, 68, 101, 97, 99, 116, 105, 118, 97, 116,
-                 101, 32, 97, 110, 32, 83, 77, 84, 80, 32, 112, 114, 111, 118, 105, 100, 101, 114,
-                 46, 32, 65, 102, 116, 101, 114, 32, 100, 101, 97, 99, 116, 105, 118, 97, 116,
-                 105, 110, 103, 32, 116, 104, 101, 32, 112, 114, 111, 118, 105, 100, 101, 114, 44,
-                 32, 116, 104, 101, 32, 117, 115, 101, 114, 115, 32, 119, 105, 108, 108, 32, 110,
-                 111, 116, 32, 98, 101, 32, 97, 98, 108, 101, 32, 116, 111, 32, 114, 101, 99, 101,
-                 105, 118, 101, 32, 83, 77, 84, 80, 32, 110, 111, 116, 105, 102, 105, 99, 97, 116,
-                 105, 111, 110, 115, 32, 102, 114, 111, 109, 32, 116, 104, 97, 116, 32, 112, 114,
-                 111, 118, 105, 100, 101, 114, 32, 97, 110, 121, 109, 111, 114, 101, 46>>}
+              {1042, 2, <<10, 12, 83, 77, 84, 80, 32, 67, 111, 110, 102, 105, 103, 115, 88, 1>>}
             ]
           },
           client_streaming: false,
@@ -33725,15 +36579,7 @@ defmodule Zitadel.Admin.V1.AdminService.Service do
             __unknown_fields__: [
               {72_295_728, 2, "*\n/smtp/{id}"},
               {50000, 2, "\n\tiam.write"},
-              {1042, 2,
-               <<10, 4, 83, 77, 84, 80, 18, 25, 82, 101, 109, 111, 118, 101, 32, 83, 77, 84, 80,
-                 32, 67, 111, 110, 102, 105, 103, 117, 114, 97, 116, 105, 111, 110, 26, 96, 82,
-                 101, 109, 111, 118, 101, 32, 116, 104, 101, 32, 83, 77, 84, 80, 32, 99, 111, 110,
-                 102, 105, 103, 117, 114, 97, 116, 105, 111, 110, 44, 32, 98, 101, 32, 97, 119,
-                 97, 114, 101, 32, 116, 104, 97, 116, 32, 116, 104, 101, 32, 117, 115, 101, 114,
-                 115, 32, 119, 105, 108, 108, 32, 110, 111, 116, 32, 103, 101, 116, 32, 97, 110,
-                 32, 69, 45, 77, 97, 105, 108, 32, 105, 102, 32, 110, 111, 32, 83, 77, 84, 80, 32,
-                 105, 115, 32, 115, 101, 116, 46>>}
+              {1042, 2, <<10, 12, 83, 77, 84, 80, 32, 67, 111, 110, 102, 105, 103, 115, 88, 1>>}
             ]
           },
           client_streaming: false,
@@ -33754,17 +36600,7 @@ defmodule Zitadel.Admin.V1.AdminService.Service do
                <<34, 16, 47, 115, 109, 116, 112, 47, 123, 105, 100, 125, 47, 95, 116, 101, 115,
                  116, 58, 1, 42>>},
               {50000, 2, "\n\tiam.write"},
-              {1042, 2,
-               <<10, 13, 83, 77, 84, 80, 32, 80, 114, 111, 118, 105, 100, 101, 114, 18, 19, 84,
-                 101, 115, 116, 32, 83, 77, 84, 80, 32, 80, 114, 111, 118, 105, 100, 101, 114, 32,
-                 26, 130, 1, 84, 101, 115, 116, 32, 97, 110, 32, 83, 77, 84, 80, 32, 112, 114,
-                 111, 118, 105, 100, 101, 114, 32, 105, 100, 101, 110, 116, 105, 102, 105, 101,
-                 100, 32, 98, 121, 32, 105, 116, 115, 32, 73, 68, 46, 32, 65, 102, 116, 101, 114,
-                 32, 116, 101, 115, 116, 105, 110, 103, 32, 116, 104, 101, 32, 112, 114, 111, 118,
-                 105, 100, 101, 114, 44, 32, 116, 104, 101, 32, 117, 115, 101, 114, 115, 32, 119,
-                 105, 108, 108, 32, 114, 101, 99, 101, 105, 118, 101, 32, 105, 110, 102, 111, 114,
-                 109, 97, 116, 105, 111, 110, 32, 97, 98, 111, 117, 116, 32, 116, 104, 101, 32,
-                 116, 101, 115, 116, 32, 114, 101, 115, 117, 108, 116, 115, 46>>}
+              {1042, 2, <<10, 12, 83, 77, 84, 80, 32, 67, 111, 110, 102, 105, 103, 115, 88, 1>>}
             ]
           },
           client_streaming: false,
@@ -33784,16 +36620,7 @@ defmodule Zitadel.Admin.V1.AdminService.Service do
               {72_295_728, 2,
                <<34, 11, 47, 115, 109, 116, 112, 47, 95, 116, 101, 115, 116, 58, 1, 42>>},
               {50000, 2, "\n\tiam.write"},
-              {1042, 2,
-               <<10, 13, 83, 77, 84, 80, 32, 80, 114, 111, 118, 105, 100, 101, 114, 18, 18, 84,
-                 101, 115, 116, 32, 83, 77, 84, 80, 32, 80, 114, 111, 118, 105, 100, 101, 114, 26,
-                 109, 84, 101, 115, 116, 32, 97, 110, 32, 83, 77, 84, 80, 32, 112, 114, 111, 118,
-                 105, 100, 101, 114, 46, 32, 65, 102, 116, 101, 114, 32, 116, 101, 115, 116, 105,
-                 110, 103, 32, 116, 104, 101, 32, 112, 114, 111, 118, 105, 100, 101, 114, 44, 32,
-                 116, 104, 101, 32, 117, 115, 101, 114, 115, 32, 119, 105, 108, 108, 32, 114, 101,
-                 99, 101, 105, 118, 101, 32, 105, 110, 102, 111, 114, 109, 97, 116, 105, 111, 110,
-                 32, 97, 98, 111, 117, 116, 32, 116, 104, 101, 32, 116, 101, 115, 116, 32, 114,
-                 101, 115, 117, 108, 116, 115, 46>>}
+              {1042, 2, <<10, 12, 83, 77, 84, 80, 32, 67, 111, 110, 102, 105, 103, 115, 88, 1>>}
             ]
           },
           client_streaming: false,
@@ -33813,12 +36640,386 @@ defmodule Zitadel.Admin.V1.AdminService.Service do
               {72_295_728, 2,
                <<34, 13, 47, 115, 109, 116, 112, 47, 95, 115, 101, 97, 114, 99, 104, 58, 1, 42>>},
               {50000, 2, "\n\biam.read"},
+              {1042, 2, <<10, 12, 83, 77, 84, 80, 32, 67, 111, 110, 102, 105, 103, 115, 88, 1>>}
+            ]
+          },
+          client_streaming: false,
+          server_streaming: false,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.MethodDescriptorProto{
+          name: "ListEmailProviders",
+          input_type: ".zitadel.admin.v1.ListEmailProvidersRequest",
+          output_type: ".zitadel.admin.v1.ListEmailProvidersResponse",
+          options: %Google.Protobuf.MethodOptions{
+            deprecated: false,
+            idempotency_level: :IDEMPOTENCY_UNKNOWN,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {72_295_728, 2,
+               <<34, 14, 47, 101, 109, 97, 105, 108, 47, 95, 115, 101, 97, 114, 99, 104, 58, 1,
+                 42>>},
+              {50000, 2, "\n\biam.read"},
               {1042, 2,
-               <<10, 12, 83, 77, 84, 80, 32, 67, 111, 110, 102, 105, 103, 115, 18, 17, 76, 105,
-                 115, 116, 32, 83, 77, 84, 80, 32, 67, 111, 110, 102, 105, 103, 115, 26, 38, 82,
-                 101, 116, 117, 114, 110, 115, 32, 97, 32, 108, 105, 115, 116, 32, 111, 102, 32,
-                 83, 77, 84, 80, 32, 99, 111, 110, 102, 105, 103, 117, 114, 97, 116, 105, 111,
-                 110, 115, 46>>}
+               <<10, 14, 69, 109, 97, 105, 108, 32, 80, 114, 111, 118, 105, 100, 101, 114, 18, 20,
+                 76, 105, 115, 116, 32, 69, 109, 97, 105, 108, 32, 112, 114, 111, 118, 105, 100,
+                 101, 114, 115, 26, 34, 82, 101, 116, 117, 114, 110, 115, 32, 97, 32, 108, 105,
+                 115, 116, 32, 111, 102, 32, 69, 109, 97, 105, 108, 32, 112, 114, 111, 118, 105,
+                 100, 101, 114, 115, 46>>}
+            ]
+          },
+          client_streaming: false,
+          server_streaming: false,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.MethodDescriptorProto{
+          name: "GetEmailProvider",
+          input_type: ".zitadel.admin.v1.GetEmailProviderRequest",
+          output_type: ".zitadel.admin.v1.GetEmailProviderResponse",
+          options: %Google.Protobuf.MethodOptions{
+            deprecated: false,
+            idempotency_level: :IDEMPOTENCY_UNKNOWN,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {72_295_728, 2, <<18, 6, 47, 101, 109, 97, 105, 108>>},
+              {50000, 2, "\n\biam.read"},
+              {1042, 2,
+               <<10, 14, 69, 109, 97, 105, 108, 32, 80, 114, 111, 118, 105, 100, 101, 114, 18, 25,
+                 71, 101, 116, 32, 97, 99, 116, 105, 118, 101, 32, 69, 109, 97, 105, 108, 32, 112,
+                 114, 111, 118, 105, 100, 101, 114, 26, 93, 82, 101, 116, 117, 114, 110, 115, 32,
+                 116, 104, 101, 32, 97, 99, 116, 105, 118, 101, 32, 69, 109, 97, 105, 108, 32,
+                 112, 114, 111, 118, 105, 100, 101, 114, 32, 102, 114, 111, 109, 32, 116, 104,
+                 101, 32, 115, 121, 115, 116, 101, 109, 46, 32, 84, 104, 105, 115, 32, 105, 115,
+                 32, 117, 115, 101, 100, 32, 116, 111, 32, 115, 101, 110, 100, 32, 69, 45, 77, 97,
+                 105, 108, 115, 32, 116, 111, 32, 116, 104, 101, 32, 117, 115, 101, 114, 115,
+                 46>>}
+            ]
+          },
+          client_streaming: false,
+          server_streaming: false,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.MethodDescriptorProto{
+          name: "GetEmailProviderById",
+          input_type: ".zitadel.admin.v1.GetEmailProviderByIdRequest",
+          output_type: ".zitadel.admin.v1.GetEmailProviderByIdResponse",
+          options: %Google.Protobuf.MethodOptions{
+            deprecated: false,
+            idempotency_level: :IDEMPOTENCY_UNKNOWN,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {72_295_728, 2, <<18, 11, 47, 101, 109, 97, 105, 108, 47, 123, 105, 100, 125>>},
+              {50000, 2, "\n\biam.read"},
+              {1042, 2,
+               <<10, 14, 69, 109, 97, 105, 108, 32, 80, 114, 111, 118, 105, 100, 101, 114, 18, 28,
+                 71, 101, 116, 32, 69, 109, 97, 105, 108, 32, 112, 114, 111, 118, 105, 100, 101,
+                 114, 32, 98, 121, 32, 105, 116, 115, 32, 105, 100, 26, 40, 71, 101, 116, 32, 97,
+                 32, 115, 112, 101, 99, 105, 102, 105, 99, 32, 69, 109, 97, 105, 108, 32, 112,
+                 114, 111, 118, 105, 100, 101, 114, 32, 98, 121, 32, 105, 116, 115, 32, 73, 68,
+                 46>>}
+            ]
+          },
+          client_streaming: false,
+          server_streaming: false,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.MethodDescriptorProto{
+          name: "AddEmailProviderSMTP",
+          input_type: ".zitadel.admin.v1.AddEmailProviderSMTPRequest",
+          output_type: ".zitadel.admin.v1.AddEmailProviderSMTPResponse",
+          options: %Google.Protobuf.MethodOptions{
+            deprecated: false,
+            idempotency_level: :IDEMPOTENCY_UNKNOWN,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {72_295_728, 2,
+               <<34, 11, 47, 101, 109, 97, 105, 108, 47, 115, 109, 116, 112, 58, 1, 42>>},
+              {50000, 2, "\n\tiam.write"},
+              {1042, 2,
+               <<10, 14, 69, 109, 97, 105, 108, 32, 80, 114, 111, 118, 105, 100, 101, 114, 18, 23,
+                 65, 100, 100, 32, 83, 77, 84, 80, 32, 69, 109, 97, 105, 108, 32, 112, 114, 111,
+                 118, 105, 100, 101, 114, 26, 52, 65, 100, 100, 32, 97, 32, 110, 101, 119, 32, 83,
+                 77, 84, 80, 32, 69, 109, 97, 105, 108, 32, 112, 114, 111, 118, 105, 100, 101,
+                 114, 32, 105, 102, 32, 110, 111, 116, 104, 105, 110, 103, 32, 105, 115, 32, 115,
+                 101, 116, 32, 121, 101, 116, 46>>}
+            ]
+          },
+          client_streaming: false,
+          server_streaming: false,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.MethodDescriptorProto{
+          name: "UpdateEmailProviderSMTP",
+          input_type: ".zitadel.admin.v1.UpdateEmailProviderSMTPRequest",
+          output_type: ".zitadel.admin.v1.UpdateEmailProviderSMTPResponse",
+          options: %Google.Protobuf.MethodOptions{
+            deprecated: false,
+            idempotency_level: :IDEMPOTENCY_UNKNOWN,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {72_295_728, 2,
+               <<26, 16, 47, 101, 109, 97, 105, 108, 47, 115, 109, 116, 112, 47, 123, 105, 100,
+                 125, 58, 1, 42>>},
+              {50000, 2, "\n\tiam.write"},
+              {1042, 2,
+               <<10, 14, 69, 109, 97, 105, 108, 32, 80, 114, 111, 118, 105, 100, 101, 114, 18, 26,
+                 85, 112, 100, 97, 116, 101, 32, 83, 77, 84, 80, 32, 69, 109, 97, 105, 108, 32,
+                 112, 114, 111, 118, 105, 100, 101, 114, 26, 160, 1, 85, 112, 100, 97, 116, 101,
+                 32, 116, 104, 101, 32, 83, 77, 84, 80, 32, 69, 109, 97, 105, 108, 32, 112, 114,
+                 111, 118, 105, 100, 101, 114, 44, 32, 98, 101, 32, 97, 119, 97, 114, 101, 32,
+                 116, 104, 97, 116, 32, 116, 104, 105, 115, 32, 119, 105, 108, 108, 32, 98, 101,
+                 32, 97, 99, 116, 105, 118, 97, 116, 101, 100, 32, 97, 115, 32, 115, 111, 111,
+                 110, 32, 97, 115, 32, 105, 116, 32, 105, 115, 32, 115, 97, 118, 101, 100, 46, 32,
+                 83, 111, 32, 116, 104, 101, 32, 117, 115, 101, 114, 115, 32, 119, 105, 108, 108,
+                 32, 103, 101, 116, 32, 110, 111, 116, 105, 102, 105, 99, 97, 116, 105, 111, 110,
+                 115, 32, 102, 114, 111, 109, 32, 116, 104, 101, 32, 110, 101, 119, 108, 121, 32,
+                 99, 111, 110, 102, 105, 103, 117, 114, 101, 100, 32, 83, 77, 84, 80, 46>>}
+            ]
+          },
+          client_streaming: false,
+          server_streaming: false,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.MethodDescriptorProto{
+          name: "AddEmailProviderHTTP",
+          input_type: ".zitadel.admin.v1.AddEmailProviderHTTPRequest",
+          output_type: ".zitadel.admin.v1.AddEmailProviderHTTPResponse",
+          options: %Google.Protobuf.MethodOptions{
+            deprecated: false,
+            idempotency_level: :IDEMPOTENCY_UNKNOWN,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {72_295_728, 2,
+               <<34, 11, 47, 101, 109, 97, 105, 108, 47, 104, 116, 116, 112, 58, 1, 42>>},
+              {50000, 2, "\n\tiam.write"},
+              {1042, 2,
+               <<10, 14, 69, 109, 97, 105, 108, 32, 80, 114, 111, 118, 105, 100, 101, 114, 18, 23,
+                 65, 100, 100, 32, 72, 84, 84, 80, 32, 69, 109, 97, 105, 108, 32, 112, 114, 111,
+                 118, 105, 100, 101, 114, 26, 52, 65, 100, 100, 32, 97, 32, 110, 101, 119, 32, 72,
+                 84, 84, 80, 32, 69, 109, 97, 105, 108, 32, 112, 114, 111, 118, 105, 100, 101,
+                 114, 32, 105, 102, 32, 110, 111, 116, 104, 105, 110, 103, 32, 105, 115, 32, 115,
+                 101, 116, 32, 121, 101, 116, 46>>}
+            ]
+          },
+          client_streaming: false,
+          server_streaming: false,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.MethodDescriptorProto{
+          name: "UpdateEmailProviderHTTP",
+          input_type: ".zitadel.admin.v1.UpdateEmailProviderHTTPRequest",
+          output_type: ".zitadel.admin.v1.UpdateEmailProviderHTTPResponse",
+          options: %Google.Protobuf.MethodOptions{
+            deprecated: false,
+            idempotency_level: :IDEMPOTENCY_UNKNOWN,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {72_295_728, 2,
+               <<26, 16, 47, 101, 109, 97, 105, 108, 47, 104, 116, 116, 112, 47, 123, 105, 100,
+                 125, 58, 1, 42>>},
+              {50000, 2, "\n\tiam.write"},
+              {1042, 2,
+               <<10, 14, 69, 109, 97, 105, 108, 32, 80, 114, 111, 118, 105, 100, 101, 114, 18, 26,
+                 85, 112, 100, 97, 116, 101, 32, 72, 84, 84, 80, 32, 69, 109, 97, 105, 108, 32,
+                 112, 114, 111, 118, 105, 100, 101, 114, 26, 160, 1, 85, 112, 100, 97, 116, 101,
+                 32, 116, 104, 101, 32, 72, 84, 84, 80, 32, 69, 109, 97, 105, 108, 32, 112, 114,
+                 111, 118, 105, 100, 101, 114, 44, 32, 98, 101, 32, 97, 119, 97, 114, 101, 32,
+                 116, 104, 97, 116, 32, 116, 104, 105, 115, 32, 119, 105, 108, 108, 32, 98, 101,
+                 32, 97, 99, 116, 105, 118, 97, 116, 101, 100, 32, 97, 115, 32, 115, 111, 111,
+                 110, 32, 97, 115, 32, 105, 116, 32, 105, 115, 32, 115, 97, 118, 101, 100, 46, 32,
+                 83, 111, 32, 116, 104, 101, 32, 117, 115, 101, 114, 115, 32, 119, 105, 108, 108,
+                 32, 103, 101, 116, 32, 110, 111, 116, 105, 102, 105, 99, 97, 116, 105, 111, 110,
+                 115, 32, 102, 114, 111, 109, 32, 116, 104, 101, 32, 110, 101, 119, 108, 121, 32,
+                 99, 111, 110, 102, 105, 103, 117, 114, 101, 100, 32, 72, 84, 84, 80, 46>>}
+            ]
+          },
+          client_streaming: false,
+          server_streaming: false,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.MethodDescriptorProto{
+          name: "UpdateEmailProviderSMTPPassword",
+          input_type: ".zitadel.admin.v1.UpdateEmailProviderSMTPPasswordRequest",
+          output_type: ".zitadel.admin.v1.UpdateEmailProviderSMTPPasswordResponse",
+          options: %Google.Protobuf.MethodOptions{
+            deprecated: false,
+            idempotency_level: :IDEMPOTENCY_UNKNOWN,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {72_295_728, 2,
+               <<26, 25, 47, 101, 109, 97, 105, 108, 47, 115, 109, 116, 112, 47, 123, 105, 100,
+                 125, 47, 112, 97, 115, 115, 119, 111, 114, 100, 58, 1, 42>>},
+              {50000, 2, "\n\tiam.write"},
+              {1042, 2,
+               <<10, 14, 69, 109, 97, 105, 108, 32, 80, 114, 111, 118, 105, 100, 101, 114, 18, 20,
+                 85, 112, 100, 97, 116, 101, 32, 83, 77, 84, 80, 32, 80, 97, 115, 115, 119, 111,
+                 114, 100, 26, 180, 1, 85, 112, 100, 97, 116, 101, 32, 116, 104, 101, 32, 83, 77,
+                 84, 80, 32, 112, 97, 115, 115, 119, 111, 114, 100, 32, 116, 104, 97, 116, 32,
+                 105, 115, 32, 117, 115, 101, 100, 32, 102, 111, 114, 32, 116, 104, 101, 32, 104,
+                 111, 115, 116, 44, 32, 98, 101, 32, 97, 119, 97, 114, 101, 32, 116, 104, 97, 116,
+                 32, 116, 104, 105, 115, 32, 119, 105, 108, 108, 32, 98, 101, 32, 97, 99, 116,
+                 105, 118, 97, 116, 101, 100, 32, 97, 115, 32, 115, 111, 111, 110, 32, 97, 115,
+                 32, 105, 116, 32, 105, 115, 32, 115, 97, 118, 101, 100, 46, 32, 83, 111, 32, 116,
+                 104, 101, 32, 117, 115, 101, 114, 115, 32, 119, 105, 108, 108, 32, 103, 101, 116,
+                 32, 110, 111, 116, 105, 102, 105, 99, 97, 116, 105, 111, 110, 115, 32, 102, 114,
+                 111, 109, 32, 116, 104, 101, 32, 110, 101, 119, 108, 121, 32, 99, 111, 110, 102,
+                 105, 103, 117, 114, 101, 100, 32, 83, 77, 84, 80, 46>>}
+            ]
+          },
+          client_streaming: false,
+          server_streaming: false,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.MethodDescriptorProto{
+          name: "ActivateEmailProvider",
+          input_type: ".zitadel.admin.v1.ActivateEmailProviderRequest",
+          output_type: ".zitadel.admin.v1.ActivateEmailProviderResponse",
+          options: %Google.Protobuf.MethodOptions{
+            deprecated: false,
+            idempotency_level: :IDEMPOTENCY_UNKNOWN,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {72_295_728, 2,
+               <<34, 21, 47, 101, 109, 97, 105, 108, 47, 123, 105, 100, 125, 47, 95, 97, 99, 116,
+                 105, 118, 97, 116, 101, 58, 1, 42>>},
+              {50000, 2, "\n\tiam.write"},
+              {1042, 2,
+               <<10, 14, 69, 109, 97, 105, 108, 32, 80, 114, 111, 118, 105, 100, 101, 114, 18, 23,
+                 65, 99, 116, 105, 118, 97, 116, 101, 32, 69, 109, 97, 105, 108, 32, 80, 114, 111,
+                 118, 105, 100, 101, 114, 26, 27, 65, 99, 116, 105, 118, 97, 116, 101, 32, 97,
+                 110, 32, 69, 109, 97, 105, 108, 32, 112, 114, 111, 118, 105, 100, 101, 114, 46>>}
+            ]
+          },
+          client_streaming: false,
+          server_streaming: false,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.MethodDescriptorProto{
+          name: "DeactivateEmailProvider",
+          input_type: ".zitadel.admin.v1.DeactivateEmailProviderRequest",
+          output_type: ".zitadel.admin.v1.DeactivateEmailProviderResponse",
+          options: %Google.Protobuf.MethodOptions{
+            deprecated: false,
+            idempotency_level: :IDEMPOTENCY_UNKNOWN,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {72_295_728, 2,
+               <<34, 23, 47, 101, 109, 97, 105, 108, 47, 123, 105, 100, 125, 47, 95, 100, 101, 97,
+                 99, 116, 105, 118, 97, 116, 101, 58, 1, 42>>},
+              {50000, 2, "\n\tiam.write"},
+              {1042, 2,
+               <<10, 14, 69, 109, 97, 105, 108, 32, 80, 114, 111, 118, 105, 100, 101, 114, 18, 25,
+                 68, 101, 97, 99, 116, 105, 118, 97, 116, 101, 32, 69, 109, 97, 105, 108, 32, 80,
+                 114, 111, 118, 105, 100, 101, 114, 26, 148, 1, 68, 101, 97, 99, 116, 105, 118,
+                 97, 116, 101, 32, 97, 110, 32, 69, 109, 97, 105, 108, 32, 112, 114, 111, 118,
+                 105, 100, 101, 114, 46, 32, 65, 102, 116, 101, 114, 32, 100, 101, 97, 99, 116,
+                 105, 118, 97, 116, 105, 110, 103, 32, 116, 104, 101, 32, 112, 114, 111, 118, 105,
+                 100, 101, 114, 44, 32, 116, 104, 101, 32, 117, 115, 101, 114, 115, 32, 119, 105,
+                 108, 108, 32, 110, 111, 116, 32, 98, 101, 32, 97, 98, 108, 101, 32, 116, 111, 32,
+                 114, 101, 99, 101, 105, 118, 101, 32, 69, 109, 97, 105, 108, 32, 110, 111, 116,
+                 105, 102, 105, 99, 97, 116, 105, 111, 110, 115, 32, 102, 114, 111, 109, 32, 116,
+                 104, 97, 116, 32, 112, 114, 111, 118, 105, 100, 101, 114, 32, 97, 110, 121, 109,
+                 111, 114, 101, 46>>}
+            ]
+          },
+          client_streaming: false,
+          server_streaming: false,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.MethodDescriptorProto{
+          name: "RemoveEmailProvider",
+          input_type: ".zitadel.admin.v1.RemoveEmailProviderRequest",
+          output_type: ".zitadel.admin.v1.RemoveEmailProviderResponse",
+          options: %Google.Protobuf.MethodOptions{
+            deprecated: false,
+            idempotency_level: :IDEMPOTENCY_UNKNOWN,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {72_295_728, 2, "*\v/email/{id}"},
+              {50000, 2, "\n\tiam.write"},
+              {1042, 2,
+               <<10, 14, 69, 109, 97, 105, 108, 32, 80, 114, 111, 118, 105, 100, 101, 114, 18, 21,
+                 82, 101, 109, 111, 118, 101, 32, 69, 109, 97, 105, 108, 32, 112, 114, 111, 118,
+                 105, 100, 101, 114, 26, 96, 82, 101, 109, 111, 118, 101, 32, 116, 104, 101, 32,
+                 69, 109, 97, 105, 108, 32, 112, 114, 111, 118, 105, 100, 101, 114, 44, 32, 98,
+                 101, 32, 97, 119, 97, 114, 101, 32, 116, 104, 97, 116, 32, 116, 104, 101, 32,
+                 117, 115, 101, 114, 115, 32, 119, 105, 108, 108, 32, 110, 111, 116, 32, 103, 101,
+                 116, 32, 97, 110, 32, 69, 45, 77, 97, 105, 108, 32, 105, 102, 32, 110, 111, 32,
+                 112, 114, 111, 118, 105, 100, 101, 114, 32, 105, 115, 32, 115, 101, 116, 46>>}
+            ]
+          },
+          client_streaming: false,
+          server_streaming: false,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.MethodDescriptorProto{
+          name: "TestEmailProviderSMTPById",
+          input_type: ".zitadel.admin.v1.TestEmailProviderSMTPByIdRequest",
+          output_type: ".zitadel.admin.v1.TestEmailProviderSMTPByIdResponse",
+          options: %Google.Protobuf.MethodOptions{
+            deprecated: false,
+            idempotency_level: :IDEMPOTENCY_UNKNOWN,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {72_295_728, 2,
+               <<34, 22, 47, 101, 109, 97, 105, 108, 47, 115, 109, 116, 112, 47, 123, 105, 100,
+                 125, 47, 95, 116, 101, 115, 116, 58, 1, 42>>},
+              {50000, 2, "\n\tiam.write"},
+              {1042, 2,
+               <<10, 14, 69, 109, 97, 105, 108, 32, 80, 114, 111, 118, 105, 100, 101, 114, 18, 24,
+                 84, 101, 115, 116, 32, 83, 77, 84, 80, 32, 69, 109, 97, 105, 108, 32, 80, 114,
+                 111, 118, 105, 100, 101, 114, 26, 136, 1, 84, 101, 115, 116, 32, 97, 110, 32, 83,
+                 77, 84, 80, 32, 69, 109, 97, 105, 108, 32, 112, 114, 111, 118, 105, 100, 101,
+                 114, 32, 105, 100, 101, 110, 116, 105, 102, 105, 101, 100, 32, 98, 121, 32, 105,
+                 116, 115, 32, 73, 68, 46, 32, 65, 102, 116, 101, 114, 32, 116, 101, 115, 116,
+                 105, 110, 103, 32, 116, 104, 101, 32, 112, 114, 111, 118, 105, 100, 101, 114, 44,
+                 32, 116, 104, 101, 32, 117, 115, 101, 114, 115, 32, 119, 105, 108, 108, 32, 114,
+                 101, 99, 101, 105, 118, 101, 32, 105, 110, 102, 111, 114, 109, 97, 116, 105, 111,
+                 110, 32, 97, 98, 111, 117, 116, 32, 116, 104, 101, 32, 116, 101, 115, 116, 32,
+                 114, 101, 115, 117, 108, 116, 115, 46>>}
+            ]
+          },
+          client_streaming: false,
+          server_streaming: false,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.MethodDescriptorProto{
+          name: "TestEmailProviderSMTP",
+          input_type: ".zitadel.admin.v1.TestEmailProviderSMTPRequest",
+          output_type: ".zitadel.admin.v1.TestEmailProviderSMTPResponse",
+          options: %Google.Protobuf.MethodOptions{
+            deprecated: false,
+            idempotency_level: :IDEMPOTENCY_UNKNOWN,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {72_295_728, 2,
+               <<34, 17, 47, 101, 109, 97, 105, 108, 47, 115, 109, 116, 112, 47, 95, 116, 101,
+                 115, 116, 58, 1, 42>>},
+              {50000, 2, "\n\tiam.write"},
+              {1042, 2,
+               <<10, 14, 69, 109, 97, 105, 108, 32, 80, 114, 111, 118, 105, 100, 101, 114, 18, 24,
+                 84, 101, 115, 116, 32, 83, 77, 84, 80, 32, 69, 109, 97, 105, 108, 32, 80, 114,
+                 111, 118, 105, 100, 101, 114, 26, 115, 84, 101, 115, 116, 32, 97, 110, 32, 83,
+                 77, 84, 80, 32, 69, 109, 97, 105, 108, 32, 112, 114, 111, 118, 105, 100, 101,
+                 114, 46, 32, 65, 102, 116, 101, 114, 32, 116, 101, 115, 116, 105, 110, 103, 32,
+                 116, 104, 101, 32, 112, 114, 111, 118, 105, 100, 101, 114, 44, 32, 116, 104, 101,
+                 32, 117, 115, 101, 114, 115, 32, 119, 105, 108, 108, 32, 114, 101, 99, 101, 105,
+                 118, 101, 32, 105, 110, 102, 111, 114, 109, 97, 116, 105, 111, 110, 32, 97, 98,
+                 111, 117, 116, 32, 116, 104, 101, 32, 116, 101, 115, 116, 32, 114, 101, 115, 117,
+                 108, 116, 115, 46>>}
             ]
           },
           client_streaming: false,
@@ -33957,6 +37158,65 @@ defmodule Zitadel.Admin.V1.AdminService.Service do
                  116, 104, 101, 32, 83, 77, 83, 32, 112, 114, 111, 118, 105, 100, 101, 114, 32,
                  111, 102, 32, 116, 104, 101, 32, 116, 121, 112, 101, 32, 84, 119, 105, 108, 105,
                  111, 46>>}
+            ]
+          },
+          client_streaming: false,
+          server_streaming: false,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.MethodDescriptorProto{
+          name: "AddSMSProviderHTTP",
+          input_type: ".zitadel.admin.v1.AddSMSProviderHTTPRequest",
+          output_type: ".zitadel.admin.v1.AddSMSProviderHTTPResponse",
+          options: %Google.Protobuf.MethodOptions{
+            deprecated: false,
+            idempotency_level: :IDEMPOTENCY_UNKNOWN,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {72_295_728, 2, <<34, 9, 47, 115, 109, 115, 47, 104, 116, 116, 112, 58, 1, 42>>},
+              {50000, 2, "\n\tiam.write"},
+              {1042, 2,
+               <<10, 12, 83, 77, 83, 32, 80, 114, 111, 118, 105, 100, 101, 114, 18, 21, 65, 100,
+                 100, 32, 72, 84, 84, 80, 32, 83, 77, 83, 32, 80, 114, 111, 118, 105, 100, 101,
+                 114, 26, 111, 67, 111, 110, 102, 105, 103, 117, 114, 101, 32, 97, 32, 110, 101,
+                 119, 32, 83, 77, 83, 32, 112, 114, 111, 118, 105, 100, 101, 114, 32, 111, 102,
+                 32, 116, 104, 101, 32, 116, 121, 112, 101, 32, 72, 84, 84, 80, 46, 32, 65, 32,
+                 112, 114, 111, 118, 105, 100, 101, 114, 32, 104, 97, 115, 32, 116, 111, 32, 98,
+                 101, 32, 97, 99, 116, 105, 118, 97, 116, 101, 100, 32, 116, 111, 32, 98, 101, 32,
+                 97, 98, 108, 101, 32, 116, 111, 32, 115, 101, 110, 100, 32, 110, 111, 116, 105,
+                 102, 105, 99, 97, 116, 105, 111, 110, 115, 46>>}
+            ]
+          },
+          client_streaming: false,
+          server_streaming: false,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.MethodDescriptorProto{
+          name: "UpdateSMSProviderHTTP",
+          input_type: ".zitadel.admin.v1.UpdateSMSProviderHTTPRequest",
+          output_type: ".zitadel.admin.v1.UpdateSMSProviderHTTPResponse",
+          options: %Google.Protobuf.MethodOptions{
+            deprecated: false,
+            idempotency_level: :IDEMPOTENCY_UNKNOWN,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {72_295_728, 2,
+               <<26, 14, 47, 115, 109, 115, 47, 104, 116, 116, 112, 47, 123, 105, 100, 125, 58, 1,
+                 42>>},
+              {50000, 2, "\n\tiam.write"},
+              {1042, 2,
+               <<10, 12, 83, 77, 83, 32, 80, 114, 111, 118, 105, 100, 101, 114, 18, 24, 85, 112,
+                 100, 97, 116, 101, 32, 72, 84, 84, 80, 32, 83, 77, 83, 32, 80, 114, 111, 118,
+                 105, 100, 101, 114, 26, 126, 67, 104, 97, 110, 103, 101, 32, 116, 104, 101, 32,
+                 99, 111, 110, 102, 105, 103, 117, 114, 97, 116, 105, 111, 110, 32, 111, 102, 32,
+                 97, 110, 32, 83, 77, 83, 32, 112, 114, 111, 118, 105, 100, 101, 114, 32, 111,
+                 102, 32, 116, 104, 101, 32, 116, 121, 112, 101, 32, 72, 84, 84, 80, 46, 32, 65,
+                 32, 112, 114, 111, 118, 105, 100, 101, 114, 32, 104, 97, 115, 32, 116, 111, 32,
+                 98, 101, 32, 97, 99, 116, 105, 118, 97, 116, 101, 100, 32, 116, 111, 32, 98, 101,
+                 32, 97, 98, 108, 101, 32, 116, 111, 32, 115, 101, 110, 100, 32, 110, 111, 116,
+                 105, 102, 105, 99, 97, 116, 105, 111, 110, 115, 46>>}
             ]
           },
           client_streaming: false,
@@ -39236,6 +42496,190 @@ defmodule Zitadel.Admin.V1.AdminService.Service do
           __unknown_fields__: []
         },
         %Google.Protobuf.MethodDescriptorProto{
+          name: "GetDefaultInviteUserMessageText",
+          input_type: ".zitadel.admin.v1.GetDefaultInviteUserMessageTextRequest",
+          output_type: ".zitadel.admin.v1.GetDefaultInviteUserMessageTextResponse",
+          options: %Google.Protobuf.MethodOptions{
+            deprecated: false,
+            idempotency_level: :IDEMPOTENCY_UNKNOWN,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {72_295_728, 2,
+               <<18, 44, 47, 116, 101, 120, 116, 47, 100, 101, 102, 97, 117, 108, 116, 47, 109,
+                 101, 115, 115, 97, 103, 101, 47, 105, 110, 118, 105, 116, 101, 95, 117, 115, 101,
+                 114, 47, 123, 108, 97, 110, 103, 117, 97, 103, 101, 125>>},
+              {50000, 2,
+               <<10, 15, 105, 97, 109, 46, 112, 111, 108, 105, 99, 121, 46, 114, 101, 97, 100>>},
+              {1042, 2,
+               <<10, 13, 77, 101, 115, 115, 97, 103, 101, 32, 84, 101, 120, 116, 115, 18, 36, 71,
+                 101, 116, 32, 68, 101, 102, 97, 117, 108, 116, 32, 73, 110, 118, 105, 116, 101,
+                 32, 85, 115, 101, 114, 32, 77, 101, 115, 115, 97, 103, 101, 32, 84, 101, 120,
+                 116, 26, 140, 2, 71, 101, 116, 32, 116, 104, 101, 32, 100, 101, 102, 97, 117,
+                 108, 116, 32, 116, 101, 120, 116, 32, 111, 102, 32, 116, 104, 101, 32, 105, 110,
+                 118, 105, 116, 101, 32, 117, 115, 101, 114, 32, 109, 101, 115, 115, 97, 103, 101,
+                 47, 101, 109, 97, 105, 108, 32, 116, 104, 97, 116, 32, 105, 115, 32, 115, 116,
+                 111, 114, 101, 100, 32, 97, 115, 32, 116, 114, 97, 110, 115, 108, 97, 116, 105,
+                 111, 110, 32, 102, 105, 108, 101, 115, 32, 105, 110, 32, 90, 73, 84, 65, 68, 69,
+                 76, 32, 105, 116, 115, 101, 108, 102, 46, 32, 84, 104, 101, 32, 116, 101, 120,
+                 116, 32, 119, 105, 108, 108, 32, 98, 101, 32, 115, 101, 110, 116, 32, 116, 111,
+                 32, 116, 104, 101, 32, 117, 115, 101, 114, 115, 32, 111, 102, 32, 97, 108, 108,
+                 32, 111, 114, 103, 97, 110, 105, 122, 97, 116, 105, 111, 110, 115, 44, 32, 116,
+                 104, 97, 116, 32, 100, 111, 32, 110, 111, 116, 32, 104, 97, 118, 101, 32, 97, 32,
+                 99, 117, 115, 116, 111, 109, 32, 116, 101, 120, 116, 32, 99, 111, 110, 102, 105,
+                 103, 117, 114, 101, 100, 46, 32, 84, 104, 101, 32, 109, 101, 115, 115, 97, 103,
+                 101, 32, 105, 115, 32, 115, 101, 110, 116, 32, 119, 104, 101, 110, 32, 97, 110,
+                 32, 105, 110, 118, 105, 116, 101, 32, 99, 111, 100, 101, 32, 101, 109, 97, 105,
+                 108, 32, 105, 115, 32, 114, 101, 113, 117, 101, 115, 116, 101, 100, 46>>}
+            ]
+          },
+          client_streaming: false,
+          server_streaming: false,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.MethodDescriptorProto{
+          name: "GetCustomInviteUserMessageText",
+          input_type: ".zitadel.admin.v1.GetCustomInviteUserMessageTextRequest",
+          output_type: ".zitadel.admin.v1.GetCustomInviteUserMessageTextResponse",
+          options: %Google.Protobuf.MethodOptions{
+            deprecated: false,
+            idempotency_level: :IDEMPOTENCY_UNKNOWN,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {72_295_728, 2,
+               <<18, 36, 47, 116, 101, 120, 116, 47, 109, 101, 115, 115, 97, 103, 101, 47, 105,
+                 110, 118, 105, 116, 101, 95, 117, 115, 101, 114, 47, 123, 108, 97, 110, 103, 117,
+                 97, 103, 101, 125>>},
+              {50000, 2,
+               <<10, 15, 105, 97, 109, 46, 112, 111, 108, 105, 99, 121, 46, 114, 101, 97, 100>>},
+              {1042, 2,
+               <<10, 13, 77, 101, 115, 115, 97, 103, 101, 32, 84, 101, 120, 116, 115, 18, 35, 71,
+                 101, 116, 32, 67, 117, 115, 116, 111, 109, 32, 73, 110, 118, 105, 116, 101, 32,
+                 85, 115, 101, 114, 32, 77, 101, 115, 115, 97, 103, 101, 32, 84, 101, 120, 116,
+                 26, 142, 2, 71, 101, 116, 32, 116, 104, 101, 32, 99, 117, 115, 116, 111, 109, 32,
+                 116, 101, 120, 116, 32, 111, 102, 32, 116, 104, 101, 32, 105, 110, 118, 105, 116,
+                 101, 32, 117, 115, 101, 114, 32, 109, 101, 115, 115, 97, 103, 101, 47, 101, 109,
+                 97, 105, 108, 32, 116, 104, 97, 116, 32, 105, 115, 32, 111, 118, 101, 114, 119,
+                 114, 105, 116, 116, 101, 110, 32, 111, 110, 32, 116, 104, 101, 32, 105, 110, 115,
+                 116, 97, 110, 99, 101, 32, 97, 115, 32, 115, 101, 116, 116, 105, 110, 103, 115,
+                 47, 100, 97, 116, 97, 98, 97, 115, 101, 46, 32, 84, 104, 101, 32, 116, 101, 120,
+                 116, 32, 119, 105, 108, 108, 32, 98, 101, 32, 115, 101, 110, 116, 32, 116, 111,
+                 32, 116, 104, 101, 32, 117, 115, 101, 114, 115, 32, 111, 102, 32, 97, 108, 108,
+                 32, 111, 114, 103, 97, 110, 105, 122, 97, 116, 105, 111, 110, 115, 44, 32, 116,
+                 104, 97, 116, 32, 100, 111, 32, 110, 111, 116, 32, 104, 97, 118, 101, 32, 97, 32,
+                 99, 117, 115, 116, 111, 109, 32, 116, 101, 120, 116, 32, 99, 111, 110, 102, 105,
+                 103, 117, 114, 101, 100, 46, 32, 84, 104, 101, 32, 109, 101, 115, 115, 97, 103,
+                 101, 32, 105, 115, 32, 115, 101, 110, 116, 32, 119, 104, 101, 110, 32, 97, 110,
+                 32, 105, 110, 118, 105, 116, 101, 32, 99, 111, 100, 101, 32, 101, 109, 97, 105,
+                 108, 32, 105, 115, 32, 114, 101, 113, 117, 101, 115, 116, 101, 100, 46>>}
+            ]
+          },
+          client_streaming: false,
+          server_streaming: false,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.MethodDescriptorProto{
+          name: "SetDefaultInviteUserMessageText",
+          input_type: ".zitadel.admin.v1.SetDefaultInviteUserMessageTextRequest",
+          output_type: ".zitadel.admin.v1.SetDefaultInviteUserMessageTextResponse",
+          options: %Google.Protobuf.MethodOptions{
+            deprecated: false,
+            idempotency_level: :IDEMPOTENCY_UNKNOWN,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {72_295_728, 2,
+               <<26, 36, 47, 116, 101, 120, 116, 47, 109, 101, 115, 115, 97, 103, 101, 47, 105,
+                 110, 118, 105, 116, 101, 95, 117, 115, 101, 114, 47, 123, 108, 97, 110, 103, 117,
+                 97, 103, 101, 125, 58, 1, 42>>},
+              {50000, 2,
+               <<10, 16, 105, 97, 109, 46, 112, 111, 108, 105, 99, 121, 46, 119, 114, 105, 116,
+                 101>>},
+              {1042, 2,
+               <<10, 13, 77, 101, 115, 115, 97, 103, 101, 32, 84, 101, 120, 116, 115, 18, 36, 83,
+                 101, 116, 32, 68, 101, 102, 97, 117, 108, 116, 32, 73, 110, 118, 105, 116, 101,
+                 32, 85, 115, 101, 114, 32, 77, 101, 115, 115, 97, 103, 101, 32, 84, 101, 120,
+                 116, 26, 160, 4, 83, 101, 116, 32, 116, 104, 101, 32, 99, 117, 115, 116, 111,
+                 109, 32, 116, 101, 120, 116, 32, 111, 102, 32, 116, 104, 101, 32, 105, 110, 118,
+                 105, 116, 101, 32, 117, 115, 101, 114, 32, 109, 101, 115, 115, 97, 103, 101, 47,
+                 101, 109, 97, 105, 108, 32, 116, 104, 97, 116, 32, 105, 115, 32, 111, 118, 101,
+                 114, 119, 114, 105, 116, 116, 101, 110, 32, 111, 110, 32, 116, 104, 101, 32, 105,
+                 110, 115, 116, 97, 110, 99, 101, 32, 97, 115, 32, 115, 101, 116, 116, 105, 110,
+                 103, 115, 47, 100, 97, 116, 97, 98, 97, 115, 101, 46, 32, 84, 104, 101, 32, 116,
+                 101, 120, 116, 32, 119, 105, 108, 108, 32, 98, 101, 32, 115, 101, 110, 116, 32,
+                 116, 111, 32, 116, 104, 101, 32, 117, 115, 101, 114, 115, 32, 111, 102, 32, 97,
+                 108, 108, 32, 111, 114, 103, 97, 110, 105, 122, 97, 116, 105, 111, 110, 115, 44,
+                 32, 116, 104, 97, 116, 32, 100, 111, 32, 110, 111, 116, 32, 104, 97, 118, 101,
+                 32, 97, 32, 99, 117, 115, 116, 111, 109, 32, 116, 101, 120, 116, 32, 99, 111,
+                 110, 102, 105, 103, 117, 114, 101, 100, 46, 32, 84, 104, 101, 32, 109, 101, 115,
+                 115, 97, 103, 101, 32, 105, 115, 32, 115, 101, 110, 116, 32, 119, 104, 101, 110,
+                 32, 97, 110, 32, 105, 110, 118, 105, 116, 101, 32, 99, 111, 100, 101, 32, 101,
+                 109, 97, 105, 108, 32, 105, 115, 32, 114, 101, 113, 117, 101, 115, 116, 101, 100,
+                 46, 32, 84, 104, 101, 32, 70, 111, 108, 108, 111, 119, 105, 110, 103, 32, 86, 97,
+                 114, 105, 97, 98, 108, 101, 115, 32, 99, 97, 110, 32, 98, 101, 32, 117, 115, 101,
+                 100, 58, 32, 123, 123, 46, 85, 115, 101, 114, 78, 97, 109, 101, 125, 125, 32,
+                 123, 123, 46, 70, 105, 114, 115, 116, 78, 97, 109, 101, 125, 125, 32, 123, 123,
+                 46, 76, 97, 115, 116, 78, 97, 109, 101, 125, 125, 32, 123, 123, 46, 78, 105, 99,
+                 107, 78, 97, 109, 101, 125, 125, 32, 123, 123, 46, 68, 105, 115, 112, 108, 97,
+                 121, 78, 97, 109, 101, 125, 125, 32, 123, 123, 46, 76, 97, 115, 116, 69, 109, 97,
+                 105, 108, 125, 125, 32, 123, 123, 46, 86, 101, 114, 105, 102, 105, 101, 100, 69,
+                 109, 97, 105, 108, 125, 125, 32, 123, 123, 46, 76, 97, 115, 116, 80, 104, 111,
+                 110, 101, 125, 125, 32, 123, 123, 46, 86, 101, 114, 105, 102, 105, 101, 100, 80,
+                 104, 111, 110, 101, 125, 125, 32, 123, 123, 46, 80, 114, 101, 102, 101, 114, 114,
+                 101, 100, 76, 111, 103, 105, 110, 78, 97, 109, 101, 125, 125, 32, 123, 123, 46,
+                 76, 111, 103, 105, 110, 78, 97, 109, 101, 115, 125, 125, 32, 123, 123, 46, 67,
+                 104, 97, 110, 103, 101, 68, 97, 116, 101, 125, 125, 32, 123, 123, 46, 67, 114,
+                 101, 97, 116, 105, 111, 110, 68, 97, 116, 101, 125, 125, 32, 123, 123, 46, 65,
+                 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 78, 97, 109, 101, 125, 125>>}
+            ]
+          },
+          client_streaming: false,
+          server_streaming: false,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.MethodDescriptorProto{
+          name: "ResetCustomInviteUserMessageTextToDefault",
+          input_type: ".zitadel.admin.v1.ResetCustomInviteUserMessageTextToDefaultRequest",
+          output_type: ".zitadel.admin.v1.ResetCustomInviteUserMessageTextToDefaultResponse",
+          options: %Google.Protobuf.MethodOptions{
+            deprecated: false,
+            idempotency_level: :IDEMPOTENCY_UNKNOWN,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {72_295_728, 2, "*$/text/message/invite_user/{language}"},
+              {50000, 2,
+               <<10, 17, 105, 97, 109, 46, 112, 111, 108, 105, 99, 121, 46, 100, 101, 108, 101,
+                 116, 101>>},
+              {1042, 2,
+               <<10, 13, 77, 101, 115, 115, 97, 103, 101, 32, 84, 101, 120, 116, 115, 18, 48, 82,
+                 101, 115, 101, 116, 32, 67, 117, 115, 116, 111, 109, 32, 73, 110, 118, 105, 116,
+                 101, 32, 85, 115, 101, 114, 32, 77, 101, 115, 115, 97, 103, 101, 32, 84, 101,
+                 120, 116, 32, 116, 111, 32, 68, 101, 102, 97, 117, 108, 116, 26, 133, 2, 82, 101,
+                 109, 111, 118, 101, 115, 32, 116, 104, 101, 32, 99, 117, 115, 116, 111, 109, 32,
+                 116, 101, 120, 116, 32, 111, 102, 32, 116, 104, 101, 32, 105, 110, 118, 105, 116,
+                 101, 32, 117, 115, 101, 114, 32, 109, 101, 115, 115, 97, 103, 101, 32, 116, 104,
+                 97, 116, 32, 105, 115, 32, 111, 118, 101, 114, 119, 114, 105, 116, 116, 101, 110,
+                 32, 111, 110, 32, 116, 104, 101, 32, 105, 110, 115, 116, 97, 110, 99, 101, 32,
+                 97, 110, 100, 32, 116, 114, 105, 103, 103, 101, 114, 115, 32, 116, 104, 101, 32,
+                 116, 101, 120, 116, 32, 102, 114, 111, 109, 32, 116, 104, 101, 32, 116, 114, 97,
+                 110, 115, 108, 97, 116, 105, 111, 110, 32, 102, 105, 108, 101, 115, 32, 115, 116,
+                 111, 114, 101, 100, 32, 105, 110, 32, 90, 73, 84, 65, 68, 69, 76, 32, 105, 116,
+                 115, 101, 108, 102, 46, 32, 84, 104, 101, 32, 116, 101, 120, 116, 32, 119, 105,
+                 108, 108, 32, 98, 101, 32, 115, 101, 110, 116, 32, 116, 111, 32, 116, 104, 101,
+                 32, 117, 115, 101, 114, 115, 32, 111, 102, 32, 97, 108, 108, 32, 111, 114, 103,
+                 97, 110, 105, 122, 97, 116, 105, 111, 110, 115, 44, 32, 116, 104, 97, 116, 32,
+                 100, 111, 32, 110, 111, 116, 32, 104, 97, 118, 101, 32, 97, 32, 99, 117, 115,
+                 116, 111, 109, 32, 116, 101, 120, 116, 32, 99, 111, 110, 102, 105, 103, 117, 114,
+                 101, 100, 46>>}
+            ]
+          },
+          client_streaming: false,
+          server_streaming: false,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.MethodDescriptorProto{
           name: "GetDefaultLoginTexts",
           input_type: ".zitadel.admin.v1.GetDefaultLoginTextsRequest",
           output_type: ".zitadel.admin.v1.GetDefaultLoginTextsResponse",
@@ -40150,6 +43594,84 @@ defmodule Zitadel.Admin.V1.AdminService.Service do
   )
 
   rpc(
+    :ListEmailProviders,
+    Zitadel.Admin.V1.ListEmailProvidersRequest,
+    Zitadel.Admin.V1.ListEmailProvidersResponse
+  )
+
+  rpc(
+    :GetEmailProvider,
+    Zitadel.Admin.V1.GetEmailProviderRequest,
+    Zitadel.Admin.V1.GetEmailProviderResponse
+  )
+
+  rpc(
+    :GetEmailProviderById,
+    Zitadel.Admin.V1.GetEmailProviderByIdRequest,
+    Zitadel.Admin.V1.GetEmailProviderByIdResponse
+  )
+
+  rpc(
+    :AddEmailProviderSMTP,
+    Zitadel.Admin.V1.AddEmailProviderSMTPRequest,
+    Zitadel.Admin.V1.AddEmailProviderSMTPResponse
+  )
+
+  rpc(
+    :UpdateEmailProviderSMTP,
+    Zitadel.Admin.V1.UpdateEmailProviderSMTPRequest,
+    Zitadel.Admin.V1.UpdateEmailProviderSMTPResponse
+  )
+
+  rpc(
+    :AddEmailProviderHTTP,
+    Zitadel.Admin.V1.AddEmailProviderHTTPRequest,
+    Zitadel.Admin.V1.AddEmailProviderHTTPResponse
+  )
+
+  rpc(
+    :UpdateEmailProviderHTTP,
+    Zitadel.Admin.V1.UpdateEmailProviderHTTPRequest,
+    Zitadel.Admin.V1.UpdateEmailProviderHTTPResponse
+  )
+
+  rpc(
+    :UpdateEmailProviderSMTPPassword,
+    Zitadel.Admin.V1.UpdateEmailProviderSMTPPasswordRequest,
+    Zitadel.Admin.V1.UpdateEmailProviderSMTPPasswordResponse
+  )
+
+  rpc(
+    :ActivateEmailProvider,
+    Zitadel.Admin.V1.ActivateEmailProviderRequest,
+    Zitadel.Admin.V1.ActivateEmailProviderResponse
+  )
+
+  rpc(
+    :DeactivateEmailProvider,
+    Zitadel.Admin.V1.DeactivateEmailProviderRequest,
+    Zitadel.Admin.V1.DeactivateEmailProviderResponse
+  )
+
+  rpc(
+    :RemoveEmailProvider,
+    Zitadel.Admin.V1.RemoveEmailProviderRequest,
+    Zitadel.Admin.V1.RemoveEmailProviderResponse
+  )
+
+  rpc(
+    :TestEmailProviderSMTPById,
+    Zitadel.Admin.V1.TestEmailProviderSMTPByIdRequest,
+    Zitadel.Admin.V1.TestEmailProviderSMTPByIdResponse
+  )
+
+  rpc(
+    :TestEmailProviderSMTP,
+    Zitadel.Admin.V1.TestEmailProviderSMTPRequest,
+    Zitadel.Admin.V1.TestEmailProviderSMTPResponse
+  )
+
+  rpc(
     :ListSMSProviders,
     Zitadel.Admin.V1.ListSMSProvidersRequest,
     Zitadel.Admin.V1.ListSMSProvidersResponse
@@ -40177,6 +43699,18 @@ defmodule Zitadel.Admin.V1.AdminService.Service do
     :UpdateSMSProviderTwilioToken,
     Zitadel.Admin.V1.UpdateSMSProviderTwilioTokenRequest,
     Zitadel.Admin.V1.UpdateSMSProviderTwilioTokenResponse
+  )
+
+  rpc(
+    :AddSMSProviderHTTP,
+    Zitadel.Admin.V1.AddSMSProviderHTTPRequest,
+    Zitadel.Admin.V1.AddSMSProviderHTTPResponse
+  )
+
+  rpc(
+    :UpdateSMSProviderHTTP,
+    Zitadel.Admin.V1.UpdateSMSProviderHTTPRequest,
+    Zitadel.Admin.V1.UpdateSMSProviderHTTPResponse
   )
 
   rpc(
@@ -40943,6 +44477,30 @@ defmodule Zitadel.Admin.V1.AdminService.Service do
     :ResetCustomPasswordChangeMessageTextToDefault,
     Zitadel.Admin.V1.ResetCustomPasswordChangeMessageTextToDefaultRequest,
     Zitadel.Admin.V1.ResetCustomPasswordChangeMessageTextToDefaultResponse
+  )
+
+  rpc(
+    :GetDefaultInviteUserMessageText,
+    Zitadel.Admin.V1.GetDefaultInviteUserMessageTextRequest,
+    Zitadel.Admin.V1.GetDefaultInviteUserMessageTextResponse
+  )
+
+  rpc(
+    :GetCustomInviteUserMessageText,
+    Zitadel.Admin.V1.GetCustomInviteUserMessageTextRequest,
+    Zitadel.Admin.V1.GetCustomInviteUserMessageTextResponse
+  )
+
+  rpc(
+    :SetDefaultInviteUserMessageText,
+    Zitadel.Admin.V1.SetDefaultInviteUserMessageTextRequest,
+    Zitadel.Admin.V1.SetDefaultInviteUserMessageTextResponse
+  )
+
+  rpc(
+    :ResetCustomInviteUserMessageTextToDefault,
+    Zitadel.Admin.V1.ResetCustomInviteUserMessageTextToDefaultRequest,
+    Zitadel.Admin.V1.ResetCustomInviteUserMessageTextToDefaultResponse
   )
 
   rpc(

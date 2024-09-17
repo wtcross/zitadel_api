@@ -6213,6 +6213,388 @@ defmodule Zitadel.User.V2.ListAuthenticationMethodTypesResponse do
   )
 end
 
+defmodule Zitadel.User.V2.CreateInviteCodeRequest do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "CreateInviteCodeRequest",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "user_id",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 5, 16, 1, 24, 200, 1>>},
+              {1052, 0, 2},
+              {1042, 2,
+               <<74, 19, 34, 54, 57, 54, 50, 57, 48, 50, 54, 56, 48, 54, 52, 56, 57, 52, 53, 53,
+                 34, 120, 200, 1, 128, 1, 1>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "userId",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "send_code",
+          extendee: nil,
+          number: 2,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_MESSAGE,
+          type_name: ".zitadel.user.v2.SendInviteCode",
+          default_value: nil,
+          options: nil,
+          oneof_index: 0,
+          json_name: "sendCode",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "return_code",
+          extendee: nil,
+          number: 3,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_MESSAGE,
+          type_name: ".zitadel.user.v2.ReturnInviteCode",
+          default_value: nil,
+          options: nil,
+          oneof_index: 0,
+          json_name: "returnCode",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [
+        %Google.Protobuf.OneofDescriptorProto{
+          name: "verification",
+          options: nil,
+          __unknown_fields__: []
+        }
+      ],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  oneof(:verification, 0)
+
+  field(:user_id, 1, type: :string, json_name: "userId", deprecated: false)
+  field(:send_code, 2, type: Zitadel.User.V2.SendInviteCode, json_name: "sendCode", oneof: 0)
+
+  field(:return_code, 3,
+    type: Zitadel.User.V2.ReturnInviteCode,
+    json_name: "returnCode",
+    oneof: 0
+  )
+end
+
+defmodule Zitadel.User.V2.CreateInviteCodeResponse do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "CreateInviteCodeResponse",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "details",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_MESSAGE,
+          type_name: ".zitadel.object.v2.Details",
+          default_value: nil,
+          options: nil,
+          oneof_index: nil,
+          json_name: "details",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "invite_code",
+          extendee: nil,
+          number: 2,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: nil,
+          oneof_index: 0,
+          json_name: "inviteCode",
+          proto3_optional: true,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [
+        %Google.Protobuf.OneofDescriptorProto{
+          name: "_invite_code",
+          options: nil,
+          __unknown_fields__: []
+        }
+      ],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:details, 1, type: Zitadel.Object.V2.Details)
+  field(:invite_code, 2, proto3_optional: true, type: :string, json_name: "inviteCode")
+end
+
+defmodule Zitadel.User.V2.ResendInviteCodeRequest do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "ResendInviteCodeRequest",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "user_id",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 5, 16, 1, 24, 200, 1>>},
+              {1052, 0, 2},
+              {1042, 2,
+               <<74, 19, 34, 54, 57, 54, 50, 57, 48, 50, 54, 56, 48, 54, 52, 56, 57, 52, 53, 53,
+                 34, 120, 200, 1, 128, 1, 1>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "userId",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:user_id, 1, type: :string, json_name: "userId", deprecated: false)
+end
+
+defmodule Zitadel.User.V2.ResendInviteCodeResponse do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "ResendInviteCodeResponse",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "details",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_MESSAGE,
+          type_name: ".zitadel.object.v2.Details",
+          default_value: nil,
+          options: nil,
+          oneof_index: nil,
+          json_name: "details",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:details, 1, type: Zitadel.Object.V2.Details)
+end
+
+defmodule Zitadel.User.V2.VerifyInviteCodeRequest do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "VerifyInviteCodeRequest",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "user_id",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 5, 16, 1, 24, 200, 1>>},
+              {1052, 0, 2},
+              {1042, 2,
+               <<74, 19, 34, 54, 57, 54, 50, 57, 48, 50, 54, 56, 48, 54, 52, 56, 57, 52, 53, 53,
+                 34, 120, 200, 1, 128, 1, 1>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "userId",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "verification_code",
+          extendee: nil,
+          number: 2,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 4, 16, 1, 24, 20>>},
+              {1052, 0, 2},
+              {1042, 2,
+               <<50, 64, 34, 116, 104, 101, 32, 118, 101, 114, 105, 102, 105, 99, 97, 116, 105,
+                 111, 110, 32, 99, 111, 100, 101, 32, 103, 101, 110, 101, 114, 97, 116, 101, 100,
+                 32, 100, 117, 114, 105, 110, 103, 32, 116, 104, 101, 32, 105, 110, 118, 105, 116,
+                 101, 32, 99, 111, 100, 101, 32, 114, 101, 113, 117, 101, 115, 116, 34, 74, 10,
+                 34, 83, 75, 74, 100, 51, 52, 50, 107, 34, 120, 20, 128, 1, 1>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "verificationCode",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:user_id, 1, type: :string, json_name: "userId", deprecated: false)
+  field(:verification_code, 2, type: :string, json_name: "verificationCode", deprecated: false)
+end
+
+defmodule Zitadel.User.V2.VerifyInviteCodeResponse do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "VerifyInviteCodeResponse",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "details",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_MESSAGE,
+          type_name: ".zitadel.object.v2.Details",
+          default_value: nil,
+          options: nil,
+          oneof_index: nil,
+          json_name: "details",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:details, 1, type: Zitadel.Object.V2.Details)
+end
+
 defmodule Zitadel.User.V2.UserService.Service do
   use GRPC.Service, name: "zitadel.user.v2.UserService", protoc_gen_elixir_version: "0.12.0"
 
@@ -7106,6 +7488,68 @@ defmodule Zitadel.User.V2.UserService.Service do
           client_streaming: false,
           server_streaming: false,
           __unknown_fields__: []
+        },
+        %Google.Protobuf.MethodDescriptorProto{
+          name: "CreateInviteCode",
+          input_type: ".zitadel.user.v2.CreateInviteCodeRequest",
+          output_type: ".zitadel.user.v2.CreateInviteCodeResponse",
+          options: %Google.Protobuf.MethodOptions{
+            deprecated: false,
+            idempotency_level: :IDEMPOTENCY_UNKNOWN,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {72_295_728, 2,
+               <<34, 31, 47, 118, 50, 47, 117, 115, 101, 114, 115, 47, 123, 117, 115, 101, 114,
+                 95, 105, 100, 125, 47, 105, 110, 118, 105, 116, 101, 95, 99, 111, 100, 101>>},
+              {50001, 2,
+               <<10, 15, 10, 13, 97, 117, 116, 104, 101, 110, 116, 105, 99, 97, 116, 101, 100>>},
+              {1042, 2, <<74, 11, 10, 3, 50, 48, 48, 18, 4, 10, 2, 79, 75>>}
+            ]
+          },
+          client_streaming: false,
+          server_streaming: false,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.MethodDescriptorProto{
+          name: "ResendInviteCode",
+          input_type: ".zitadel.user.v2.ResendInviteCodeRequest",
+          output_type: ".zitadel.user.v2.ResendInviteCodeResponse",
+          options: %Google.Protobuf.MethodOptions{
+            deprecated: false,
+            idempotency_level: :IDEMPOTENCY_UNKNOWN,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {72_295_728, 2, "\"&/v2/users/{user_id}/invite_code/resend"},
+              {50001, 2,
+               <<10, 15, 10, 13, 97, 117, 116, 104, 101, 110, 116, 105, 99, 97, 116, 101, 100>>},
+              {1042, 2, <<74, 11, 10, 3, 50, 48, 48, 18, 4, 10, 2, 79, 75>>}
+            ]
+          },
+          client_streaming: false,
+          server_streaming: false,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.MethodDescriptorProto{
+          name: "VerifyInviteCode",
+          input_type: ".zitadel.user.v2.VerifyInviteCodeRequest",
+          output_type: ".zitadel.user.v2.VerifyInviteCodeResponse",
+          options: %Google.Protobuf.MethodOptions{
+            deprecated: false,
+            idempotency_level: :IDEMPOTENCY_UNKNOWN,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {72_295_728, 2, "\"&/v2/users/{user_id}/invite_code/verify"},
+              {50001, 2,
+               <<10, 15, 10, 13, 97, 117, 116, 104, 101, 110, 116, 105, 99, 97, 116, 101, 100>>},
+              {1042, 2, <<74, 11, 10, 3, 50, 48, 48, 18, 4, 10, 2, 79, 75>>}
+            ]
+          },
+          client_streaming: false,
+          server_streaming: false,
+          __unknown_fields__: []
         }
       ],
       options: nil,
@@ -7245,6 +7689,24 @@ defmodule Zitadel.User.V2.UserService.Service do
     :ListAuthenticationMethodTypes,
     Zitadel.User.V2.ListAuthenticationMethodTypesRequest,
     Zitadel.User.V2.ListAuthenticationMethodTypesResponse
+  )
+
+  rpc(
+    :CreateInviteCode,
+    Zitadel.User.V2.CreateInviteCodeRequest,
+    Zitadel.User.V2.CreateInviteCodeResponse
+  )
+
+  rpc(
+    :ResendInviteCode,
+    Zitadel.User.V2.ResendInviteCodeRequest,
+    Zitadel.User.V2.ResendInviteCodeResponse
+  )
+
+  rpc(
+    :VerifyInviteCode,
+    Zitadel.User.V2.VerifyInviteCodeRequest,
+    Zitadel.User.V2.VerifyInviteCodeResponse
   )
 end
 

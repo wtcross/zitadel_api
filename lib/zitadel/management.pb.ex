@@ -34674,6 +34674,591 @@ defmodule Zitadel.Management.V1.ResetCustomPasswordChangeMessageTextToDefaultRes
   field(:details, 1, type: Zitadel.V1.ObjectDetails)
 end
 
+defmodule Zitadel.Management.V1.GetCustomInviteUserMessageTextRequest do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "GetCustomInviteUserMessageTextRequest",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "language",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [{1071, 2, <<114, 5, 16, 1, 24, 200, 1>>}]
+          },
+          oneof_index: nil,
+          json_name: "language",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:language, 1, type: :string, deprecated: false)
+end
+
+defmodule Zitadel.Management.V1.GetCustomInviteUserMessageTextResponse do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "GetCustomInviteUserMessageTextResponse",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "custom_text",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_MESSAGE,
+          type_name: ".zitadel.text.v1.MessageCustomText",
+          default_value: nil,
+          options: nil,
+          oneof_index: nil,
+          json_name: "customText",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:custom_text, 1, type: Zitadel.Text.V1.MessageCustomText, json_name: "customText")
+end
+
+defmodule Zitadel.Management.V1.GetDefaultInviteUserMessageTextRequest do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "GetDefaultInviteUserMessageTextRequest",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "language",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [{1071, 2, <<114, 5, 16, 1, 24, 200, 1>>}]
+          },
+          oneof_index: nil,
+          json_name: "language",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:language, 1, type: :string, deprecated: false)
+end
+
+defmodule Zitadel.Management.V1.GetDefaultInviteUserMessageTextResponse do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "GetDefaultInviteUserMessageTextResponse",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "custom_text",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_MESSAGE,
+          type_name: ".zitadel.text.v1.MessageCustomText",
+          default_value: nil,
+          options: nil,
+          oneof_index: nil,
+          json_name: "customText",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:custom_text, 1, type: Zitadel.Text.V1.MessageCustomText, json_name: "customText")
+end
+
+defmodule Zitadel.Management.V1.SetCustomInviteUserMessageTextRequest do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "SetCustomInviteUserMessageTextRequest",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "language",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 5, 16, 1, 24, 200, 1>>},
+              {1042, 2, <<74, 4, 34, 100, 101, 34>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "language",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "title",
+          extendee: nil,
+          number: 2,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 3, 40, 208, 15>>},
+              {1042, 2,
+               <<74, 36, 34, 73, 110, 118, 105, 116, 97, 116, 105, 111, 110, 32, 116, 111, 32,
+                 123, 123, 46, 65, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 78, 97, 109,
+                 101, 125, 125, 34, 120, 244, 3>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "title",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "pre_header",
+          extendee: nil,
+          number: 3,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 3, 40, 208, 15>>},
+              {1042, 2,
+               <<74, 36, 34, 73, 110, 118, 105, 116, 97, 116, 105, 111, 110, 32, 116, 111, 32,
+                 123, 123, 46, 65, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 78, 97, 109,
+                 101, 125, 125, 34, 120, 244, 3>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "preHeader",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "subject",
+          extendee: nil,
+          number: 4,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 3, 40, 208, 15>>},
+              {1042, 2,
+               <<74, 36, 34, 73, 110, 118, 105, 116, 97, 116, 105, 111, 110, 32, 116, 111, 32,
+                 123, 123, 46, 65, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 78, 97, 109,
+                 101, 125, 125, 34, 120, 244, 3>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "subject",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "greeting",
+          extendee: nil,
+          number: 5,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 3, 40, 160, 31>>},
+              {1042, 2,
+               <<74, 25, 34, 72, 101, 108, 108, 111, 32, 123, 123, 46, 68, 105, 115, 112, 108, 97,
+                 121, 78, 97, 109, 101, 125, 125, 44, 34, 120, 232, 7>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "greeting",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "text",
+          extendee: nil,
+          number: 6,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 4, 40, 192, 184, 2>>},
+              {1042, 2,
+               <<74, 164, 1, 34, 89, 111, 117, 114, 32, 117, 115, 101, 114, 32, 104, 97, 115, 32,
+                 98, 101, 101, 110, 32, 105, 110, 118, 105, 116, 101, 100, 32, 116, 111, 32, 123,
+                 123, 46, 65, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 78, 97, 109, 101,
+                 125, 125, 46, 32, 80, 108, 101, 97, 115, 101, 32, 99, 108, 105, 99, 107, 32, 116,
+                 104, 101, 32, 98, 117, 116, 116, 111, 110, 32, 98, 101, 108, 111, 119, 32, 116,
+                 111, 32, 102, 105, 110, 105, 115, 104, 32, 116, 104, 101, 32, 105, 110, 118, 105,
+                 116, 101, 32, 112, 114, 111, 99, 101, 115, 115, 46, 32, 73, 102, 32, 121, 111,
+                 117, 32, 100, 105, 100, 110, 39, 116, 32, 97, 115, 107, 32, 102, 111, 114, 32,
+                 116, 104, 105, 115, 32, 109, 97, 105, 108, 44, 32, 112, 108, 101, 97, 115, 101,
+                 32, 105, 103, 110, 111, 114, 101, 32, 105, 116, 46, 34, 120, 144, 78>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "text",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "button_text",
+          extendee: nil,
+          number: 7,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 3, 40, 160, 31>>},
+              {1042, 2,
+               <<74, 15, 34, 65, 99, 99, 101, 112, 116, 32, 105, 110, 118, 105, 116, 101, 34, 120,
+                 244, 3>>}
+            ]
+          },
+          oneof_index: nil,
+          json_name: "buttonText",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "footer_text",
+          extendee: nil,
+          number: 8,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [{1071, 2, <<114, 3, 40, 192, 62>>}]
+          },
+          oneof_index: nil,
+          json_name: "footerText",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:language, 1, type: :string, deprecated: false)
+  field(:title, 2, type: :string, deprecated: false)
+  field(:pre_header, 3, type: :string, json_name: "preHeader", deprecated: false)
+  field(:subject, 4, type: :string, deprecated: false)
+  field(:greeting, 5, type: :string, deprecated: false)
+  field(:text, 6, type: :string, deprecated: false)
+  field(:button_text, 7, type: :string, json_name: "buttonText", deprecated: false)
+  field(:footer_text, 8, type: :string, json_name: "footerText", deprecated: false)
+end
+
+defmodule Zitadel.Management.V1.SetCustomInviteUserMessageTextResponse do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "SetCustomInviteUserMessageTextResponse",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "details",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_MESSAGE,
+          type_name: ".zitadel.v1.ObjectDetails",
+          default_value: nil,
+          options: nil,
+          oneof_index: nil,
+          json_name: "details",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:details, 1, type: Zitadel.V1.ObjectDetails)
+end
+
+defmodule Zitadel.Management.V1.ResetCustomInviteUserMessageTextToDefaultRequest do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "ResetCustomInviteUserMessageTextToDefaultRequest",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "language",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [{1071, 2, <<114, 5, 16, 1, 24, 200, 1>>}]
+          },
+          oneof_index: nil,
+          json_name: "language",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:language, 1, type: :string, deprecated: false)
+end
+
+defmodule Zitadel.Management.V1.ResetCustomInviteUserMessageTextToDefaultResponse do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "ResetCustomInviteUserMessageTextToDefaultResponse",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "details",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_MESSAGE,
+          type_name: ".zitadel.v1.ObjectDetails",
+          default_value: nil,
+          options: nil,
+          oneof_index: nil,
+          json_name: "details",
+          proto3_optional: nil,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:details, 1, type: Zitadel.V1.ObjectDetails)
+end
+
 defmodule Zitadel.Management.V1.GetOrgIDPByIDRequest do
   use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
 
@@ -51758,35 +52343,35 @@ defmodule Zitadel.Management.V1.ManagementService.Service do
               {1042, 2,
                <<10, 14, 80, 114, 111, 106, 101, 99, 116, 32, 71, 114, 97, 110, 116, 115, 10, 7,
                  77, 101, 109, 98, 101, 114, 115, 10, 22, 90, 73, 84, 65, 68, 69, 76, 32, 65, 100,
-                 109, 105, 110, 105, 115, 116, 114, 97, 116, 111, 114, 115, 18, 20, 76, 105, 115,
-                 116, 32, 80, 114, 111, 106, 101, 99, 116, 32, 77, 101, 109, 98, 101, 114, 115,
-                 26, 222, 1, 77, 101, 109, 98, 101, 114, 115, 32, 97, 114, 101, 32, 117, 115, 101,
-                 114, 115, 32, 119, 105, 116, 104, 32, 112, 101, 114, 109, 105, 115, 115, 105,
-                 111, 110, 32, 116, 111, 32, 97, 100, 109, 105, 110, 105, 115, 116, 114, 97, 116,
-                 101, 32, 90, 73, 84, 65, 68, 69, 76, 32, 111, 110, 32, 100, 105, 102, 102, 101,
-                 114, 101, 110, 116, 32, 108, 101, 118, 101, 108, 115, 46, 32, 84, 104, 105, 115,
-                 32, 114, 101, 113, 117, 101, 115, 116, 32, 114, 101, 116, 117, 114, 110, 115, 32,
-                 97, 108, 108, 32, 117, 115, 101, 114, 115, 32, 119, 105, 116, 104, 32, 109, 101,
-                 109, 98, 101, 114, 115, 104, 105, 112, 115, 32, 111, 110, 32, 116, 104, 101, 32,
-                 112, 114, 111, 106, 101, 99, 116, 32, 103, 114, 97, 110, 116, 32, 108, 101, 118,
-                 101, 108, 44, 32, 109, 97, 116, 99, 104, 105, 110, 103, 32, 116, 104, 101, 32,
-                 115, 101, 97, 114, 99, 104, 32, 113, 117, 101, 114, 105, 101, 115, 46, 32, 84,
-                 104, 101, 32, 115, 101, 97, 114, 99, 104, 32, 113, 117, 101, 114, 105, 101, 115,
-                 32, 119, 105, 108, 108, 32, 98, 101, 32, 65, 78, 68, 32, 108, 105, 110, 107, 101,
-                 100, 46, 114, 227, 1, 10, 224, 1, 10, 15, 120, 45, 122, 105, 116, 97, 100, 101,
-                 108, 45, 111, 114, 103, 105, 100, 18, 202, 1, 84, 104, 101, 32, 100, 101, 102,
-                 97, 117, 108, 116, 32, 105, 115, 32, 97, 108, 119, 97, 121, 115, 32, 116, 104,
-                 101, 32, 111, 114, 103, 97, 110, 105, 122, 97, 116, 105, 111, 110, 32, 111, 102,
-                 32, 116, 104, 101, 32, 114, 101, 113, 117, 101, 115, 116, 105, 110, 103, 32, 117,
-                 115, 101, 114, 46, 32, 73, 102, 32, 121, 111, 117, 32, 108, 105, 107, 101, 32,
-                 116, 111, 32, 103, 101, 116, 47, 115, 101, 116, 32, 97, 32, 114, 101, 115, 117,
-                 108, 116, 32, 111, 102, 32, 97, 110, 111, 116, 104, 101, 114, 32, 111, 114, 103,
-                 97, 110, 105, 122, 97, 116, 105, 111, 110, 32, 105, 110, 99, 108, 117, 100, 101,
-                 32, 116, 104, 101, 32, 104, 101, 97, 100, 101, 114, 46, 32, 77, 97, 107, 101, 32,
-                 115, 117, 114, 101, 32, 116, 104, 101, 32, 117, 115, 101, 114, 32, 104, 97, 115,
-                 32, 112, 101, 114, 109, 105, 115, 115, 105, 111, 110, 32, 116, 111, 32, 97, 99,
-                 99, 101, 115, 115, 32, 116, 104, 101, 32, 114, 101, 113, 117, 101, 115, 116, 101,
-                 100, 32, 100, 97, 116, 97, 46, 24, 1>>}
+                 109, 105, 110, 105, 115, 116, 114, 97, 116, 111, 114, 115, 18, 26, 76, 105, 115,
+                 116, 32, 80, 114, 111, 106, 101, 99, 116, 32, 71, 114, 97, 110, 116, 32, 77, 101,
+                 109, 98, 101, 114, 115, 26, 222, 1, 77, 101, 109, 98, 101, 114, 115, 32, 97, 114,
+                 101, 32, 117, 115, 101, 114, 115, 32, 119, 105, 116, 104, 32, 112, 101, 114, 109,
+                 105, 115, 115, 105, 111, 110, 32, 116, 111, 32, 97, 100, 109, 105, 110, 105, 115,
+                 116, 114, 97, 116, 101, 32, 90, 73, 84, 65, 68, 69, 76, 32, 111, 110, 32, 100,
+                 105, 102, 102, 101, 114, 101, 110, 116, 32, 108, 101, 118, 101, 108, 115, 46, 32,
+                 84, 104, 105, 115, 32, 114, 101, 113, 117, 101, 115, 116, 32, 114, 101, 116, 117,
+                 114, 110, 115, 32, 97, 108, 108, 32, 117, 115, 101, 114, 115, 32, 119, 105, 116,
+                 104, 32, 109, 101, 109, 98, 101, 114, 115, 104, 105, 112, 115, 32, 111, 110, 32,
+                 116, 104, 101, 32, 112, 114, 111, 106, 101, 99, 116, 32, 103, 114, 97, 110, 116,
+                 32, 108, 101, 118, 101, 108, 44, 32, 109, 97, 116, 99, 104, 105, 110, 103, 32,
+                 116, 104, 101, 32, 115, 101, 97, 114, 99, 104, 32, 113, 117, 101, 114, 105, 101,
+                 115, 46, 32, 84, 104, 101, 32, 115, 101, 97, 114, 99, 104, 32, 113, 117, 101,
+                 114, 105, 101, 115, 32, 119, 105, 108, 108, 32, 98, 101, 32, 65, 78, 68, 32, 108,
+                 105, 110, 107, 101, 100, 46, 114, 227, 1, 10, 224, 1, 10, 15, 120, 45, 122, 105,
+                 116, 97, 100, 101, 108, 45, 111, 114, 103, 105, 100, 18, 202, 1, 84, 104, 101,
+                 32, 100, 101, 102, 97, 117, 108, 116, 32, 105, 115, 32, 97, 108, 119, 97, 121,
+                 115, 32, 116, 104, 101, 32, 111, 114, 103, 97, 110, 105, 122, 97, 116, 105, 111,
+                 110, 32, 111, 102, 32, 116, 104, 101, 32, 114, 101, 113, 117, 101, 115, 116, 105,
+                 110, 103, 32, 117, 115, 101, 114, 46, 32, 73, 102, 32, 121, 111, 117, 32, 108,
+                 105, 107, 101, 32, 116, 111, 32, 103, 101, 116, 47, 115, 101, 116, 32, 97, 32,
+                 114, 101, 115, 117, 108, 116, 32, 111, 102, 32, 97, 110, 111, 116, 104, 101, 114,
+                 32, 111, 114, 103, 97, 110, 105, 122, 97, 116, 105, 111, 110, 32, 105, 110, 99,
+                 108, 117, 100, 101, 32, 116, 104, 101, 32, 104, 101, 97, 100, 101, 114, 46, 32,
+                 77, 97, 107, 101, 32, 115, 117, 114, 101, 32, 116, 104, 101, 32, 117, 115, 101,
+                 114, 32, 104, 97, 115, 32, 112, 101, 114, 109, 105, 115, 115, 105, 111, 110, 32,
+                 116, 111, 32, 97, 99, 99, 101, 115, 115, 32, 116, 104, 101, 32, 114, 101, 113,
+                 117, 101, 115, 116, 101, 100, 32, 100, 97, 116, 97, 46, 24, 1>>}
             ]
           },
           client_streaming: false,
@@ -57095,6 +57680,214 @@ defmodule Zitadel.Management.V1.ManagementService.Service do
           __unknown_fields__: []
         },
         %Google.Protobuf.MethodDescriptorProto{
+          name: "GetCustomInviteUserMessageText",
+          input_type: ".zitadel.management.v1.GetCustomInviteUserMessageTextRequest",
+          output_type: ".zitadel.management.v1.GetCustomInviteUserMessageTextResponse",
+          options: %Google.Protobuf.MethodOptions{
+            deprecated: false,
+            idempotency_level: :IDEMPOTENCY_UNKNOWN,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {72_295_728, 2,
+               <<18, 36, 47, 116, 101, 120, 116, 47, 109, 101, 115, 115, 97, 103, 101, 47, 105,
+                 110, 118, 105, 116, 101, 95, 117, 115, 101, 114, 47, 123, 108, 97, 110, 103, 117,
+                 97, 103, 101, 125>>},
+              {50000, 2, "\n\vpolicy.read"},
+              {1042, 2,
+               <<10, 13, 77, 101, 115, 115, 97, 103, 101, 32, 84, 101, 120, 116, 115, 18, 35, 71,
+                 101, 116, 32, 67, 117, 115, 116, 111, 109, 32, 73, 110, 118, 105, 116, 101, 32,
+                 85, 115, 101, 114, 32, 77, 101, 115, 115, 97, 103, 101, 32, 84, 101, 120, 116,
+                 26, 157, 1, 71, 101, 116, 32, 116, 104, 101, 32, 99, 117, 115, 116, 111, 109, 32,
+                 116, 101, 120, 116, 32, 111, 102, 32, 116, 104, 101, 32, 112, 97, 115, 115, 119,
+                 111, 114, 100, 45, 99, 104, 97, 110, 103, 101, 100, 32, 109, 101, 115, 115, 97,
+                 103, 101, 47, 101, 109, 97, 105, 108, 32, 116, 104, 97, 116, 32, 105, 115, 32,
+                 99, 111, 110, 102, 105, 103, 117, 114, 101, 100, 32, 111, 110, 32, 116, 104, 101,
+                 32, 111, 114, 103, 97, 110, 105, 122, 97, 116, 105, 111, 110, 46, 32, 84, 104,
+                 101, 32, 109, 101, 115, 115, 97, 103, 101, 32, 105, 115, 32, 115, 101, 110, 116,
+                 32, 119, 104, 101, 110, 32, 97, 110, 32, 105, 110, 118, 105, 116, 101, 32, 99,
+                 111, 100, 101, 32, 101, 109, 97, 105, 108, 32, 105, 115, 32, 114, 101, 113, 117,
+                 101, 115, 116, 101, 100, 46, 114, 227, 1, 10, 224, 1, 10, 15, 120, 45, 122, 105,
+                 116, 97, 100, 101, 108, 45, 111, 114, 103, 105, 100, 18, 202, 1, 84, 104, 101,
+                 32, 100, 101, 102, 97, 117, 108, 116, 32, 105, 115, 32, 97, 108, 119, 97, 121,
+                 115, 32, 116, 104, 101, 32, 111, 114, 103, 97, 110, 105, 122, 97, 116, 105, 111,
+                 110, 32, 111, 102, 32, 116, 104, 101, 32, 114, 101, 113, 117, 101, 115, 116, 105,
+                 110, 103, 32, 117, 115, 101, 114, 46, 32, 73, 102, 32, 121, 111, 117, 32, 108,
+                 105, 107, 101, 32, 116, 111, 32, 103, 101, 116, 47, 115, 101, 116, 32, 97, 32,
+                 114, 101, 115, 117, 108, 116, 32, 111, 102, 32, 97, 110, 111, 116, 104, 101, 114,
+                 32, 111, 114, 103, 97, 110, 105, 122, 97, 116, 105, 111, 110, 32, 105, 110, 99,
+                 108, 117, 100, 101, 32, 116, 104, 101, 32, 104, 101, 97, 100, 101, 114, 46, 32,
+                 77, 97, 107, 101, 32, 115, 117, 114, 101, 32, 116, 104, 101, 32, 117, 115, 101,
+                 114, 32, 104, 97, 115, 32, 112, 101, 114, 109, 105, 115, 115, 105, 111, 110, 32,
+                 116, 111, 32, 97, 99, 99, 101, 115, 115, 32, 116, 104, 101, 32, 114, 101, 113,
+                 117, 101, 115, 116, 101, 100, 32, 100, 97, 116, 97, 46, 24, 1>>}
+            ]
+          },
+          client_streaming: false,
+          server_streaming: false,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.MethodDescriptorProto{
+          name: "GetDefaultInviteUserMessageText",
+          input_type: ".zitadel.management.v1.GetDefaultInviteUserMessageTextRequest",
+          output_type: ".zitadel.management.v1.GetDefaultInviteUserMessageTextResponse",
+          options: %Google.Protobuf.MethodOptions{
+            deprecated: false,
+            idempotency_level: :IDEMPOTENCY_UNKNOWN,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {72_295_728, 2,
+               <<18, 44, 47, 116, 101, 120, 116, 47, 100, 101, 102, 97, 117, 108, 116, 47, 109,
+                 101, 115, 115, 97, 103, 101, 47, 105, 110, 118, 105, 116, 101, 95, 117, 115, 101,
+                 114, 47, 123, 108, 97, 110, 103, 117, 97, 103, 101, 125>>},
+              {50000, 2, "\n\vpolicy.read"},
+              {1042, 2,
+               <<10, 13, 77, 101, 115, 115, 97, 103, 101, 32, 84, 101, 120, 116, 115, 18, 36, 71,
+                 101, 116, 32, 68, 101, 102, 97, 117, 108, 116, 32, 73, 110, 118, 105, 116, 101,
+                 32, 85, 115, 101, 114, 32, 77, 101, 115, 115, 97, 103, 101, 32, 84, 101, 120,
+                 116, 26, 191, 1, 71, 101, 116, 32, 116, 104, 101, 32, 100, 101, 102, 97, 117,
+                 108, 116, 32, 116, 101, 120, 116, 32, 111, 102, 32, 116, 104, 101, 32, 105, 110,
+                 118, 105, 116, 101, 32, 117, 115, 101, 114, 32, 109, 101, 115, 115, 97, 103, 101,
+                 47, 101, 109, 97, 105, 108, 32, 116, 104, 97, 116, 32, 105, 115, 32, 99, 111,
+                 110, 102, 105, 103, 117, 114, 101, 100, 32, 111, 110, 32, 116, 104, 101, 32, 105,
+                 110, 115, 116, 97, 110, 99, 101, 32, 111, 114, 32, 97, 115, 32, 116, 114, 97,
+                 110, 115, 108, 97, 116, 105, 111, 110, 32, 102, 105, 108, 101, 115, 32, 105, 110,
+                 32, 90, 73, 84, 65, 68, 69, 76, 32, 105, 116, 115, 101, 108, 102, 46, 32, 84,
+                 104, 101, 32, 109, 101, 115, 115, 97, 103, 101, 32, 105, 115, 32, 115, 101, 110,
+                 116, 32, 119, 104, 101, 110, 32, 97, 110, 32, 105, 110, 118, 105, 116, 101, 32,
+                 99, 111, 100, 101, 32, 101, 109, 97, 105, 108, 32, 105, 115, 32, 114, 101, 113,
+                 117, 101, 115, 116, 101, 100, 46, 114, 227, 1, 10, 224, 1, 10, 15, 120, 45, 122,
+                 105, 116, 97, 100, 101, 108, 45, 111, 114, 103, 105, 100, 18, 202, 1, 84, 104,
+                 101, 32, 100, 101, 102, 97, 117, 108, 116, 32, 105, 115, 32, 97, 108, 119, 97,
+                 121, 115, 32, 116, 104, 101, 32, 111, 114, 103, 97, 110, 105, 122, 97, 116, 105,
+                 111, 110, 32, 111, 102, 32, 116, 104, 101, 32, 114, 101, 113, 117, 101, 115, 116,
+                 105, 110, 103, 32, 117, 115, 101, 114, 46, 32, 73, 102, 32, 121, 111, 117, 32,
+                 108, 105, 107, 101, 32, 116, 111, 32, 103, 101, 116, 47, 115, 101, 116, 32, 97,
+                 32, 114, 101, 115, 117, 108, 116, 32, 111, 102, 32, 97, 110, 111, 116, 104, 101,
+                 114, 32, 111, 114, 103, 97, 110, 105, 122, 97, 116, 105, 111, 110, 32, 105, 110,
+                 99, 108, 117, 100, 101, 32, 116, 104, 101, 32, 104, 101, 97, 100, 101, 114, 46,
+                 32, 77, 97, 107, 101, 32, 115, 117, 114, 101, 32, 116, 104, 101, 32, 117, 115,
+                 101, 114, 32, 104, 97, 115, 32, 112, 101, 114, 109, 105, 115, 115, 105, 111, 110,
+                 32, 116, 111, 32, 97, 99, 99, 101, 115, 115, 32, 116, 104, 101, 32, 114, 101,
+                 113, 117, 101, 115, 116, 101, 100, 32, 100, 97, 116, 97, 46, 24, 1>>}
+            ]
+          },
+          client_streaming: false,
+          server_streaming: false,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.MethodDescriptorProto{
+          name: "SetCustomInviteUserMessageCustomText",
+          input_type: ".zitadel.management.v1.SetCustomInviteUserMessageTextRequest",
+          output_type: ".zitadel.management.v1.SetCustomInviteUserMessageTextResponse",
+          options: %Google.Protobuf.MethodOptions{
+            deprecated: false,
+            idempotency_level: :IDEMPOTENCY_UNKNOWN,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {72_295_728, 2,
+               <<26, 36, 47, 116, 101, 120, 116, 47, 109, 101, 115, 115, 97, 103, 101, 47, 105,
+                 110, 118, 105, 116, 101, 95, 117, 115, 101, 114, 47, 123, 108, 97, 110, 103, 117,
+                 97, 103, 101, 125, 58, 1, 42>>},
+              {50000, 2, "\n\fpolicy.write"},
+              {1042, 2,
+               <<10, 13, 77, 101, 115, 115, 97, 103, 101, 32, 84, 101, 120, 116, 115, 18, 35, 83,
+                 101, 116, 32, 67, 117, 115, 116, 111, 109, 32, 73, 110, 118, 105, 116, 101, 32,
+                 85, 115, 101, 114, 32, 77, 101, 115, 115, 97, 103, 101, 32, 84, 101, 120, 116,
+                 26, 152, 3, 83, 101, 116, 32, 116, 104, 101, 32, 99, 117, 115, 116, 111, 109, 32,
+                 116, 101, 120, 116, 32, 111, 102, 32, 116, 104, 101, 32, 105, 110, 118, 105, 116,
+                 101, 32, 117, 115, 101, 114, 32, 109, 101, 115, 115, 97, 103, 101, 47, 101, 109,
+                 97, 105, 108, 32, 102, 111, 114, 32, 116, 104, 101, 32, 111, 114, 103, 97, 110,
+                 105, 122, 97, 116, 105, 111, 110, 46, 32, 84, 104, 101, 32, 109, 101, 115, 115,
+                 97, 103, 101, 32, 105, 115, 32, 115, 101, 110, 116, 32, 119, 104, 101, 110, 32,
+                 97, 110, 32, 105, 110, 118, 105, 116, 101, 32, 99, 111, 100, 101, 32, 101, 109,
+                 97, 105, 108, 32, 105, 115, 32, 114, 101, 113, 117, 101, 115, 116, 101, 100, 46,
+                 32, 84, 104, 101, 32, 70, 111, 108, 108, 111, 119, 105, 110, 103, 32, 86, 97,
+                 114, 105, 97, 98, 108, 101, 115, 32, 99, 97, 110, 32, 98, 101, 32, 117, 115, 101,
+                 100, 58, 32, 123, 123, 46, 85, 115, 101, 114, 78, 97, 109, 101, 125, 125, 32,
+                 123, 123, 46, 70, 105, 114, 115, 116, 78, 97, 109, 101, 125, 125, 32, 123, 123,
+                 46, 76, 97, 115, 116, 78, 97, 109, 101, 125, 125, 32, 123, 123, 46, 78, 105, 99,
+                 107, 78, 97, 109, 101, 125, 125, 32, 123, 123, 46, 68, 105, 115, 112, 108, 97,
+                 121, 78, 97, 109, 101, 125, 125, 32, 123, 123, 46, 76, 97, 115, 116, 69, 109, 97,
+                 105, 108, 125, 125, 32, 123, 123, 46, 86, 101, 114, 105, 102, 105, 101, 100, 69,
+                 109, 97, 105, 108, 125, 125, 32, 123, 123, 46, 76, 97, 115, 116, 80, 104, 111,
+                 110, 101, 125, 125, 32, 123, 123, 46, 86, 101, 114, 105, 102, 105, 101, 100, 80,
+                 104, 111, 110, 101, 125, 125, 32, 123, 123, 46, 80, 114, 101, 102, 101, 114, 114,
+                 101, 100, 76, 111, 103, 105, 110, 78, 97, 109, 101, 125, 125, 32, 123, 123, 46,
+                 76, 111, 103, 105, 110, 78, 97, 109, 101, 115, 125, 125, 32, 123, 123, 46, 67,
+                 104, 97, 110, 103, 101, 68, 97, 116, 101, 125, 125, 32, 123, 123, 46, 67, 114,
+                 101, 97, 116, 105, 111, 110, 68, 97, 116, 101, 125, 125, 32, 123, 123, 46, 65,
+                 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 78, 97, 109, 101, 125, 125, 114,
+                 227, 1, 10, 224, 1, 10, 15, 120, 45, 122, 105, 116, 97, 100, 101, 108, 45, 111,
+                 114, 103, 105, 100, 18, 202, 1, 84, 104, 101, 32, 100, 101, 102, 97, 117, 108,
+                 116, 32, 105, 115, 32, 97, 108, 119, 97, 121, 115, 32, 116, 104, 101, 32, 111,
+                 114, 103, 97, 110, 105, 122, 97, 116, 105, 111, 110, 32, 111, 102, 32, 116, 104,
+                 101, 32, 114, 101, 113, 117, 101, 115, 116, 105, 110, 103, 32, 117, 115, 101,
+                 114, 46, 32, 73, 102, 32, 121, 111, 117, 32, 108, 105, 107, 101, 32, 116, 111,
+                 32, 103, 101, 116, 47, 115, 101, 116, 32, 97, 32, 114, 101, 115, 117, 108, 116,
+                 32, 111, 102, 32, 97, 110, 111, 116, 104, 101, 114, 32, 111, 114, 103, 97, 110,
+                 105, 122, 97, 116, 105, 111, 110, 32, 105, 110, 99, 108, 117, 100, 101, 32, 116,
+                 104, 101, 32, 104, 101, 97, 100, 101, 114, 46, 32, 77, 97, 107, 101, 32, 115,
+                 117, 114, 101, 32, 116, 104, 101, 32, 117, 115, 101, 114, 32, 104, 97, 115, 32,
+                 112, 101, 114, 109, 105, 115, 115, 105, 111, 110, 32, 116, 111, 32, 97, 99, 99,
+                 101, 115, 115, 32, 116, 104, 101, 32, 114, 101, 113, 117, 101, 115, 116, 101,
+                 100, 32, 100, 97, 116, 97, 46, 24, 1>>}
+            ]
+          },
+          client_streaming: false,
+          server_streaming: false,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.MethodDescriptorProto{
+          name: "ResetCustomInviteUserMessageTextToDefault",
+          input_type: ".zitadel.management.v1.ResetCustomInviteUserMessageTextToDefaultRequest",
+          output_type: ".zitadel.management.v1.ResetCustomInviteUserMessageTextToDefaultResponse",
+          options: %Google.Protobuf.MethodOptions{
+            deprecated: false,
+            idempotency_level: :IDEMPOTENCY_UNKNOWN,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {72_295_728, 2, "*$/text/message/invite_user/{language}"},
+              {50000, 2, "\n\rpolicy.delete"},
+              {1042, 2,
+               <<10, 13, 77, 101, 115, 115, 97, 103, 101, 32, 84, 101, 120, 116, 115, 18, 48, 82,
+                 101, 115, 101, 116, 32, 67, 117, 115, 116, 111, 109, 32, 73, 110, 118, 105, 116,
+                 101, 32, 85, 115, 101, 114, 32, 77, 101, 115, 115, 97, 103, 101, 32, 84, 101,
+                 120, 116, 32, 116, 111, 32, 68, 101, 102, 97, 117, 108, 116, 26, 176, 1, 82, 101,
+                 109, 111, 118, 101, 115, 32, 116, 104, 101, 32, 99, 117, 115, 116, 111, 109, 32,
+                 116, 101, 120, 116, 32, 111, 102, 32, 116, 104, 101, 32, 105, 110, 118, 105, 116,
+                 101, 32, 117, 115, 101, 114, 32, 109, 101, 115, 115, 97, 103, 101, 32, 102, 114,
+                 111, 109, 32, 116, 104, 101, 32, 111, 114, 103, 97, 110, 105, 122, 97, 116, 105,
+                 111, 110, 32, 97, 110, 100, 32, 116, 104, 101, 114, 101, 102, 111, 114, 101, 32,
+                 116, 104, 101, 32, 100, 101, 102, 97, 117, 108, 116, 32, 116, 101, 120, 116, 115,
+                 32, 102, 114, 111, 109, 32, 116, 104, 101, 32, 105, 110, 115, 116, 97, 110, 99,
+                 101, 32, 111, 114, 32, 116, 114, 97, 110, 115, 108, 97, 116, 105, 111, 110, 32,
+                 102, 105, 108, 101, 115, 32, 119, 105, 108, 108, 32, 98, 101, 32, 116, 114, 105,
+                 103, 103, 101, 114, 101, 100, 32, 102, 111, 114, 32, 116, 104, 101, 32, 117, 115,
+                 101, 114, 115, 46, 114, 227, 1, 10, 224, 1, 10, 15, 120, 45, 122, 105, 116, 97,
+                 100, 101, 108, 45, 111, 114, 103, 105, 100, 18, 202, 1, 84, 104, 101, 32, 100,
+                 101, 102, 97, 117, 108, 116, 32, 105, 115, 32, 97, 108, 119, 97, 121, 115, 32,
+                 116, 104, 101, 32, 111, 114, 103, 97, 110, 105, 122, 97, 116, 105, 111, 110, 32,
+                 111, 102, 32, 116, 104, 101, 32, 114, 101, 113, 117, 101, 115, 116, 105, 110,
+                 103, 32, 117, 115, 101, 114, 46, 32, 73, 102, 32, 121, 111, 117, 32, 108, 105,
+                 107, 101, 32, 116, 111, 32, 103, 101, 116, 47, 115, 101, 116, 32, 97, 32, 114,
+                 101, 115, 117, 108, 116, 32, 111, 102, 32, 97, 110, 111, 116, 104, 101, 114, 32,
+                 111, 114, 103, 97, 110, 105, 122, 97, 116, 105, 111, 110, 32, 105, 110, 99, 108,
+                 117, 100, 101, 32, 116, 104, 101, 32, 104, 101, 97, 100, 101, 114, 46, 32, 77,
+                 97, 107, 101, 32, 115, 117, 114, 101, 32, 116, 104, 101, 32, 117, 115, 101, 114,
+                 32, 104, 97, 115, 32, 112, 101, 114, 109, 105, 115, 115, 105, 111, 110, 32, 116,
+                 111, 32, 97, 99, 99, 101, 115, 115, 32, 116, 104, 101, 32, 114, 101, 113, 117,
+                 101, 115, 116, 101, 100, 32, 100, 97, 116, 97, 46, 24, 1>>}
+            ]
+          },
+          client_streaming: false,
+          server_streaming: false,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.MethodDescriptorProto{
           name: "GetCustomLoginTexts",
           input_type: ".zitadel.management.v1.GetCustomLoginTextsRequest",
           output_type: ".zitadel.management.v1.GetCustomLoginTextsResponse",
@@ -60759,6 +61552,30 @@ defmodule Zitadel.Management.V1.ManagementService.Service do
     :ResetCustomPasswordChangeMessageTextToDefault,
     Zitadel.Management.V1.ResetCustomPasswordChangeMessageTextToDefaultRequest,
     Zitadel.Management.V1.ResetCustomPasswordChangeMessageTextToDefaultResponse
+  )
+
+  rpc(
+    :GetCustomInviteUserMessageText,
+    Zitadel.Management.V1.GetCustomInviteUserMessageTextRequest,
+    Zitadel.Management.V1.GetCustomInviteUserMessageTextResponse
+  )
+
+  rpc(
+    :GetDefaultInviteUserMessageText,
+    Zitadel.Management.V1.GetDefaultInviteUserMessageTextRequest,
+    Zitadel.Management.V1.GetDefaultInviteUserMessageTextResponse
+  )
+
+  rpc(
+    :SetCustomInviteUserMessageCustomText,
+    Zitadel.Management.V1.SetCustomInviteUserMessageTextRequest,
+    Zitadel.Management.V1.SetCustomInviteUserMessageTextResponse
+  )
+
+  rpc(
+    :ResetCustomInviteUserMessageTextToDefault,
+    Zitadel.Management.V1.ResetCustomInviteUserMessageTextToDefaultRequest,
+    Zitadel.Management.V1.ResetCustomInviteUserMessageTextToDefaultResponse
   )
 
   rpc(

@@ -74,19 +74,7 @@ defmodule Zitadel.User.V2.SetHumanEmail do
           type: :TYPE_BOOL,
           type_name: nil,
           default_value: nil,
-          options: %Google.Protobuf.FieldOptions{
-            ctype: :STRING,
-            packed: nil,
-            deprecated: false,
-            lazy: false,
-            jstype: :JS_NORMAL,
-            weak: false,
-            unverified_lazy: false,
-            debug_redact: false,
-            uninterpreted_option: [],
-            __pb_extensions__: %{},
-            __unknown_fields__: [{1071, 2, <<106, 2, 8, 1>>}]
-          },
+          options: nil,
           oneof_index: 0,
           json_name: "isVerified",
           proto3_optional: nil,
@@ -127,7 +115,7 @@ defmodule Zitadel.User.V2.SetHumanEmail do
     oneof: 0
   )
 
-  field(:is_verified, 4, type: :bool, json_name: "isVerified", oneof: 0, deprecated: false)
+  field(:is_verified, 4, type: :bool, json_name: "isVerified", oneof: 0)
 end
 
 defmodule Zitadel.User.V2.HumanEmail do

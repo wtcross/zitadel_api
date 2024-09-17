@@ -194,6 +194,12 @@ defmodule Zitadel.Settings.V2.IdentityProviderType do
           number: 11,
           options: nil,
           __unknown_fields__: []
+        },
+        %Google.Protobuf.EnumValueDescriptorProto{
+          name: "IDENTITY_PROVIDER_TYPE_APPLE",
+          number: 12,
+          options: nil,
+          __unknown_fields__: []
         }
       ],
       options: nil,
@@ -215,6 +221,7 @@ defmodule Zitadel.Settings.V2.IdentityProviderType do
   field(:IDENTITY_PROVIDER_TYPE_GITLAB_SELF_HOSTED, 9)
   field(:IDENTITY_PROVIDER_TYPE_GOOGLE, 10)
   field(:IDENTITY_PROVIDER_TYPE_SAML, 11)
+  field(:IDENTITY_PROVIDER_TYPE_APPLE, 12)
 end
 
 defmodule Zitadel.Settings.V2.LoginSettings do

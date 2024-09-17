@@ -1571,3 +1571,137 @@ defmodule Zitadel.User.V2.Passkey do
   field(:state, 2, type: Zitadel.User.V2.AuthFactorState, enum: true, deprecated: false)
   field(:name, 3, type: :string, deprecated: false)
 end
+
+defmodule Zitadel.User.V2.SendInviteCode do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "SendInviteCode",
+      field: [
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "url_template",
+          extendee: nil,
+          number: 1,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 5, 16, 1, 24, 200, 1>>},
+              {1042, 2,
+               <<74, 84, 34, 104, 116, 116, 112, 115, 58, 47, 47, 101, 120, 97, 109, 112, 108,
+                 101, 46, 99, 111, 109, 47, 117, 115, 101, 114, 47, 105, 110, 118, 105, 116, 101,
+                 63, 117, 115, 101, 114, 73, 68, 61, 123, 123, 46, 85, 115, 101, 114, 73, 68, 125,
+                 125, 38, 99, 111, 100, 101, 61, 123, 123, 46, 67, 111, 100, 101, 125, 125, 38,
+                 111, 114, 103, 73, 68, 61, 123, 123, 46, 79, 114, 103, 73, 68, 125, 125, 34, 120,
+                 200, 1, 128, 1, 1>>}
+            ]
+          },
+          oneof_index: 0,
+          json_name: "urlTemplate",
+          proto3_optional: true,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.FieldDescriptorProto{
+          name: "application_name",
+          extendee: nil,
+          number: 2,
+          label: :LABEL_OPTIONAL,
+          type: :TYPE_STRING,
+          type_name: nil,
+          default_value: nil,
+          options: %Google.Protobuf.FieldOptions{
+            ctype: :STRING,
+            packed: nil,
+            deprecated: false,
+            lazy: false,
+            jstype: :JS_NORMAL,
+            weak: false,
+            unverified_lazy: false,
+            debug_redact: false,
+            uninterpreted_option: [],
+            __pb_extensions__: %{},
+            __unknown_fields__: [
+              {1071, 2, <<114, 5, 16, 1, 24, 200, 1>>},
+              {1042, 2,
+               <<74, 16, 34, 67, 117, 115, 116, 111, 109, 101, 114, 80, 111, 114, 116, 97, 108,
+                 34, 120, 200, 1, 128, 1, 1>>}
+            ]
+          },
+          oneof_index: 1,
+          json_name: "applicationName",
+          proto3_optional: true,
+          __unknown_fields__: []
+        }
+      ],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [
+        %Google.Protobuf.OneofDescriptorProto{
+          name: "_url_template",
+          options: nil,
+          __unknown_fields__: []
+        },
+        %Google.Protobuf.OneofDescriptorProto{
+          name: "_application_name",
+          options: nil,
+          __unknown_fields__: []
+        }
+      ],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+
+  field(:url_template, 1,
+    proto3_optional: true,
+    type: :string,
+    json_name: "urlTemplate",
+    deprecated: false
+  )
+
+  field(:application_name, 2,
+    proto3_optional: true,
+    type: :string,
+    json_name: "applicationName",
+    deprecated: false
+  )
+end
+
+defmodule Zitadel.User.V2.ReturnInviteCode do
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+
+  def descriptor do
+    # credo:disable-for-next-line
+    %Google.Protobuf.DescriptorProto{
+      name: "ReturnInviteCode",
+      field: [],
+      nested_type: [],
+      enum_type: [],
+      extension_range: [],
+      extension: [],
+      options: nil,
+      oneof_decl: [],
+      reserved_range: [],
+      reserved_name: [],
+      __unknown_fields__: []
+    }
+  end
+end
